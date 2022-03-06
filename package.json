@@ -2,7 +2,7 @@
   "name": "zmemmap",
   "version": "0.0.1",
   "description": "Z88DK tool to parse and interpret the memory map files (.map)",
-  "author": "Javier Escriva",
+  "author": "Javier.Escriva",
   "license": "MIT",
   "main": "./main.js",
   "bin": "./zmemmap.js",
@@ -10,14 +10,13 @@
     "assets": []
   },
   "dependencies": {
-    "commander": "^5.0.0",
-    "pngjs": "^5.0.0"
+    "commander": "^8.0.0"
   },
   "scripts": {
-    "preinstall": 		"npm i -g pkg",
-    "test": 			"node zmemmap",
-    "package-win": 		"pkg . --target node12-win-x64 --output ./bin/zmemmap.exe --no-bytecode",
-    "package-linux": 	"pkg . --target node12-linux-x64 --output ./bin/zmemmap-linux --no-bytecode",
-    "package-macos": 	"pkg . --target node12-macos-x64 --output ./bin/zmemmap-macos --no-bytecode"
+    "preinstall": "npm i -g pkg",
+    "test": "node zmemmap",
+    "package-win": "pkg . --target node12-win-x64 --output ./bin/zmemmap.exe --no-bytecode",
+    "package-linux": "pkg . --target node12-linux-x64 --output ./bin/zmemmap-linux --no-bytecode",
+    "package-macos": "pkg . --target node12-macos-x64 --output ./bin/zmemmap-macos --no-bytecode"
   }
 }
