@@ -1,2 +1,3 @@
 # zmemmap
-blah blah blah
+Z88DK tool to parse and interpret the memory map files 
+
