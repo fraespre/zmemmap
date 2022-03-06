@@ -9,6 +9,11 @@ function error(message) {
   process.exit(1)
 }
 
+function debug(struct, message) {
+  if(struct.verbose)
+    console.error(" > "+message)
+}
+
 function checkFile(filePath) {
   if( !FS.existsSync(filePath) ) 				error("File '"+filePath+"' not found")
   else {
@@ -16,14 +21,17 @@ function checkFile(filePath) {
   }
 }
 
+
 function mainScan(filePath, options) {
   var struct, outCsv
   
-  console.log("[filePath:"+filePath+"][options:"+options+"]")
+  //console.log("[filePath:"+filePath+"][options:"+options+"]")
   try {
-    struct= initBulk(filePath)
-    //readMapFile(filePath, struct)
-    outCsv= FS.createWriteStream(struct.file+".csv", {encoding:'utf8'})
+    struct= initStruct(filePath, options)
+    readMapFile(struct)
+    calculateSize(struct)
+    groupBy(struct)
+    outCsv= FS.createWriteStream(struct.path+struct.name+".csv", {encoding:'utf8'})
     
 /*    
     scan.fillHeader1(outAsm, true);
@@ -58,85 +66,119 @@ function mainScan(filePath, options) {
   }
 }
 
-function initBulk(filePath) {
-  var pFile= filePath.substr(0, filePath.lastIndexOf('.'))
-  //var pName= pFile.substr(pFile.lastIndexOf('/')+1)
-  //    pName= pName.charAt(0).toLowerCase() + pName.slice(1)  
-  //var pPath= pFile.substr(0, pFile.lastIndexOf('/')+1) 
-  var struct=	{ 	file:pFile,
-  					//name:pName,
-  					//path:pPath,
-  					detail:""
+function initStruct(filePath, options) {
+  var pName= filePath.substr(0, filePath.lastIndexOf('.'))
+      pName= pName.substr(pName.lastIndexOf('/')+1)
+  var pPath= filePath.substr(0, filePath.lastIndexOf('/')+1) 
+  var struct=	{ 	file: filePath,
+  					name: pName,
+  					path: pPath,
+  					verbose: options.verbose==true,
+  					details: null,
+  					sections: null,
   				}
-  //console.log( bulk )
+  //console.log(struct)
   return(struct)
 }
 
-function readBulkFile(filePath, struct) {
-  var lines, words, word, i, j, index
+function readMapFile(struct) {
+  var tmpStruct, lines, line, row, word, idx
   
-  lines= FS.readFileSync(filePath).toString().split("\n")
-  struct.detail= new Array()
-  console.log("\n")
-  index= 0
+  lines= FS.readFileSync(struct.file).toString().split("\n")
+  struct.details= new Array()
+  debug(struct, "reading '"+struct.file+"' file")
   
   for(i in lines) {
-    if(lines[i].trim().length>0) {
-      bulk.detail[index]= new Array()
-      bulk.detail[index].mask= false
-      bulk.detail[index].blank= false
-      bulk.detail[index].descriptor= false
-      words= lines[i].split(/(\s+)/).filter( e => e.trim().length > 0)
-      console.log(words)
-      j= 0
-      word= words[j++]
-	  
-      if(word==OP_SCAN) {
-		bulk.detail[index].operation= word
-        word= words[j++]
-        while(word[0]=='-') {
-          switch(word[1]) {
-            case 'm':
-              bulk.detail[index].mask= true 
-              break
-            case 'b':
-              bulk.detail[index].blank= true 
-              break
-            case 'd':
-              bulk.detail[index].descriptor= true 
-              break
-            case 'r': //ignored
-              bulk.detail[index].raw= 'ignored'
-              break
-            default:
-              throw "The parameter '"+word[1]+"' is unknow [line "+(i+1)+"]"
-          } 
-          word= words[j++]
-        }
-        bulk.detail[index].filePath= bulk.path + word
-        word= words[j++]
-        sizes= cmmn.checkSizeParam(word)
-        bulk.detail[index].width= sizes[0]
-        bulk.detail[index].height= sizes[1]
-		
-	  }else if(word==OP_ADD) {
-	    bulk.detail[index].operation= word
-		word= words[j++]
-		bulk.detail[index].filePath= bulk.path + word
-		
-	  }else {
-		throw "The command '"+word+"' [line "+(index+1)+"] is not recognized"
-	  }
-	  
-      //console.log( bulk.detail[i] )
-      index++    
+    line= lines[i].trim()
+    if(line.length>0) {
+      //console.log( line )
+      row= new Array()
+      
+      // parse item
+      word= line.slice( 0, idx= line.indexOf("=") ); line= line.substr(idx+1)
+      row.item= word.trim()
+      // parse address
+      word= line.slice( 0, idx= line.indexOf(";") ); line= line.substr(idx+1)
+      row.address= parseInt( word.trim().substr(1) , 16)
+      row["size"]= null
+      // parse varType
+      word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
+      rowvarType= word.trim()     
+      // parse scope
+      word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
+      row.scope= word.trim() 
+      // parse def
+      word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
+      row.def= word.trim()=="def"       
+      // parse component
+      word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
+      row.component= word.trim()  
+      // parse section
+      word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
+      row.section= word.trim()        
+      
+      // load new Row             
+      struct.details.push( row );
     }
   }
-  console.log("\n")
+  
+  debug(struct, "parsed "+struct.details.length+" lines")
+  //console.log( struct.matrix )
 }
 
+function calculateSize(struct) {
+  var row, lastRow
+  
+  // sort by address
+  struct.details.sort( (a, b) => a.address-b.address ) //struct.matrix.sort( (a, b) => a.address.localeCompare(b.address )
+  debug(struct, "sorted by address")
+  // calculate size
+  for(var idx=1; idx<struct.details.length; idx++) {
+    row= struct.details[idx]
+    lastRow= struct.details[idx-1]
+  	if(row.address==lastRow.address)  lastRow.size= 0
+  	else							  lastRow.size= row.address-lastRow.address
+  }
+  debug(struct, "size calculated")
+  //console.log( struct.detail )
+}
 
+function groupBy(struct) {
+  var detailTmp1, detailTmp2, sectionTmp
+  
+  // extract sections
+  detailTmp1= struct.details.filter(row => (row.def==false)&&(row.section.length>0));
+  sectionTmp= [ ... new Set( detailTmp1.map(row => row.section) ) ]
+  sectionTmp= sectionTmp.sort( (a, b) => a.localeCompare(b) )
+  debug(struct, "generated "+sectionTmp.length+" sections")
+  //console.log( struct.section )
+  
+  // extract components
+  struct.sections= new Array()
+  for(var idx=0; idx<sectionTmp.length; idx++) {
+    struct.sections[idx]= { name: sectionTmp[idx], components: new Array() }
+    
+    detailTmp2= detailTmp1.filter(row => row.section==struct.sections[idx].name);
+    for(var idy=0; idy<detailTmp2.length; idy++) {
+      struct.sections[idx].components[idy]= detailTmp2[idy].component
 
+      //console.log( section +" - "+ detailTmp2[idy].component )
+    }
+    
+    //console.log( struct.sections[idx].name +": "+detailTmp2.length )
+    //console.log( struct.sections[idx].name +" - "+ struct.sections[idx].components.length )
+  }
+  console.log( struct.sections )
+}
+
+function sortFilterMap(struct) {
+
+  // filters
+  struct.detail= struct.detail.filter(row => row.def != true);
+  struct.detail= struct.detail.filter(row => row.size > 0);
+  struct.detail= struct.detail.filter(row => row.component != "zx_crt_asm_m4");
+  
+}
 
 
 

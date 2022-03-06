@@ -10,7 +10,7 @@ prog
   .description(pckg.description+"\nAuthor:"+pckg.author+" Version:"+pckg.version)
   .version(pckg.version)
   .argument('<file>', 'map file to parse')
-  .option('-r, --raw', 'output raw data to binary file')
+  .option('-v, --verbose', 'detailed info about the parsing process')
   .action( function(file, options) {
     //console.log(" [action]"); console.log(" >file: "+file); console.log(" >options: "+options);
     main.checkFile(file)
