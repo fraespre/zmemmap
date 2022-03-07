@@ -10,7 +10,7 @@ function error(message) {
 }
 
 function debug(struct, message) {
-  if(struct.verbose)
+  if(struct.opVerbose)
     console.error(" > "+message)
 }
 
@@ -62,7 +62,8 @@ function mainScan(filePath, options) {
     
     outCsv.close()
   }catch(problem) {
-    error(problem)
+    //error(problem)
+    console.log(problem.stack);
   }
 }
 
@@ -73,7 +74,8 @@ function initStruct(filePath, options) {
   var struct=	{ 	file: filePath,
   					name: pName,
   					path: pPath,
-  					verbose: options.verbose==true,
+  					opVerbose: options.verbose==true,
+  					opOnlyUser: options.user==true,
   					details: null,
   					sections: null,
   				}
@@ -118,7 +120,12 @@ function readMapFile(struct) {
       row.section= word.trim()        
       
       // load new Row             
-      struct.details.push( row );
+      if(struct.opOnlyUser) {
+      	if( row.component.endsWith("_c") || row.component.endsWith("_asm") ) 
+      	  struct.details.push( row )
+      } else 
+        struct.details.push( row )
+        
     }
   }
   
@@ -144,31 +151,45 @@ function calculateSize(struct) {
 }
 
 function groupBy(struct) {
-  var detailTmp1, detailTmp2, sectionTmp
+  var detailTmp1, detailTmp2, detailTmp3, sectionTmp, componentTmp, sumItem, sumComp
   
-  // extract sections
-  detailTmp1= struct.details.filter(row => (row.def==false)&&(row.section.length>0));
+  // extract sections > components > items
+  debug(struct, "grouping:")
+  
+  struct.sections= new Array()
+  detailTmp1= struct.details.filter(row => (row.size>0)&&(row.def==false)&&(row.section.length>0));
   sectionTmp= [ ... new Set( detailTmp1.map(row => row.section) ) ]
   sectionTmp= sectionTmp.sort( (a, b) => a.localeCompare(b) )
-  debug(struct, "generated "+sectionTmp.length+" sections")
-  //console.log( struct.section )
   
-  // extract components
-  struct.sections= new Array()
   for(var idx=0; idx<sectionTmp.length; idx++) {
-    struct.sections[idx]= { name: sectionTmp[idx], components: new Array() }
+    debug(struct, "  L> Section: "+sectionTmp[idx])
+  
+    struct.sections[idx]= { name: sectionTmp[idx], components: new Array(), size: 0 }  
+    detailTmp2= detailTmp1.filter(row => row.section==sectionTmp[idx]);
+    componentTmp= [ ... new Set( detailTmp2.map(row => row.component) ) ]
+    componentTmp= componentTmp.sort( (a, b) => a.localeCompare(b) )    
     
-    detailTmp2= detailTmp1.filter(row => row.section==struct.sections[idx].name);
-    for(var idy=0; idy<detailTmp2.length; idy++) {
-      struct.sections[idx].components[idy]= detailTmp2[idy].component
-
-      //console.log( section +" - "+ detailTmp2[idy].component )
+    for(var idy=0, sumComp=0; idy<componentTmp.length; idy++) {
+      debug(struct, "    L> Component: "+componentTmp[idy])
+    
+      struct.sections[idx].components[idy]= { name: componentTmp[idy], items: new Array(), size: 0 }
+      detailTmp3= detailTmp2.filter(row => row.component==componentTmp[idy]);
+      detailTmp3.sort( (a, b) => b.size-a.size )
+ 
+      for(var idz=0, sumItem=0; idz<detailTmp3.length; idz++) {
+        //debug(struct, "      -> Item ["+detailTmp3[idz].size+"]: "+detailTmp3[idz].item)
+        
+        struct.sections[idx].components[idy].items[idz]= { name: detailTmp3[idz].item, size: detailTmp3[idz].size }
+        sumItem+= detailTmp3[idz].size
+      }
+      struct.sections[idx].components[idy].size= sumItem
+      
+      sumComp+= sumItem
     }
+    struct.sections[idx].size= sumComp
     
-    //console.log( struct.sections[idx].name +": "+detailTmp2.length )
-    //console.log( struct.sections[idx].name +" - "+ struct.sections[idx].components.length )
   }
-  console.log( struct.sections )
+  //console.log( struct.sections )
 }
 
 function sortFilterMap(struct) {

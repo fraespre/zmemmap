@@ -10,6 +10,7 @@ prog
   .description(pckg.description+"\nAuthor:"+pckg.author+" Version:"+pckg.version)
   .version(pckg.version)
   .argument('<file>', 'map file to parse')
+  .option('-u, --user', 'only the user items without libraries')
   .option('-v, --verbose', 'detailed info about the parsing process')
   .action( function(file, options) {
     //console.log(" [action]"); console.log(" >file: "+file); console.log(" >options: "+options);
