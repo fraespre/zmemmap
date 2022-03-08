@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?mso-application progid="Excel.Sheet"?> 
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="https://www.w3.org/TR/html401/"> 
+<Worksheet ss:Name="Resume"> 
+<Table> 
+      <ss:Row/> 
+      <ss:Row> 
+          <ss:Cell/> 
+          <ss:Cell> 
+              <ss:Data ss:Type="String">Total</ss:Data> 
+          </ss:Cell> 
+          <ss:Cell> 
+              <ss:Data ss:Type="Number">-45</ss:Data> 
+          </ss:Cell> 
+      </ss:Row> 
+</Table> 
+</Worksheet> 
+<Worksheet ss:Name="GroupedItems"> 
+<Table> 
+      <ss:Row/> 
+      <ss:Row> 
+          <ss:Cell/> 
+          <ss:Cell> 
+              <ss:Data ss:Type="String">Total</ss:Data> 
+          </ss:Cell> 
+          <ss:Cell> 
+              <ss:Data ss:Type="Number">-45</ss:Data> 
+          </ss:Cell> 
+      </ss:Row> 
+</Table> 
+</Worksheet> 
+</Workbook> 
