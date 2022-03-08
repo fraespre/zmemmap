@@ -157,7 +157,7 @@
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Component</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Item</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SizeItem</Data> </Cell> 
-          <Cell ss:StyleID="s23"> <Data ss:Type="String">SumComp</Data> </Cell> 
+          <Cell ss:StyleID="s23"> <Data ss:Type="String">SumCom</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SumSect</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
