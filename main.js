@@ -1,5 +1,7 @@
 const FS= require('fs')
-
+// https://www.z88dk.org/forum/viewtopic.php?t=10253
+// http://m8y.org/Microsoft_Office_2003_XML_Reference_Schemas/Help/html/spreadsheetml_HV01151864.htm
+//__code_compiler_size
 
 module.exports= { checkFile, mainScan }
 
@@ -23,47 +25,24 @@ function checkFile(filePath) {
 
 
 function mainScan(filePath, options) {
-  var struct, outCsv
+  var struct, outFile
   
   //console.log("[filePath:"+filePath+"][options:"+options+"]")
   try {
     struct= initStruct(filePath, options)
     readMapFile(struct)
     calculateSize(struct)
-    groupBy(struct)
-    outCsv= FS.createWriteStream(struct.path+struct.name+".csv", {encoding:'utf8'})
+    groupingAddr(struct)
+    resultsSize(struct)
     
-/*    
-    scan.fillHeader1(outAsm, true);
-    offset= 0
-    
-    for(i in bulk.detail) {
-      one= bulk.detail[i]
-      console.log(one)
- 
-      if(one.operation==OP_SCAN) {
-        sprite= scan.initSprite(one.filePath, one.width, one.height, one.mask, one.blank, one.descriptor)
-        sprite.bulkOffset= offset
-        scan.scanImage(sprite)
-        if(hasVerbose) scan.viewSprite(sprite)
-        scan.dumpResult(sprite, outAsm, outBin, one.mask, one.blank, true, one.descriptor, true)
-        offset+= sprite.totaLength
-		
-	  }else if(one.operation==OP_ADD) {
-		length= addOperation(one.filePath, offset, outAsm, outBin)
-		offset+= length
-	  }	
-	  
-    }
-    
-	var file= bulk.file.substr(bulk.file.lastIndexOf('/')+1)
-    scan.fillHeader3(outAsm, bulk.name, file, true)
-*/
-    
-    outCsv.close()
-  }catch(problem) {
-    //error(problem)
-    console.log(problem.stack);
+    outFile= FS.createWriteStream(struct.path+struct.name+".xml", {encoding:'utf8'})
+    fillHead(struct, outFile)
+    fillResume(struct, outFile)
+    fillSections(struct, outFile)
+    fillFoot(struct, outFile)
+    outFile.close()
+  }catch(exception) {
+    console.log( exception.stack );
   }
 }
 
@@ -76,22 +55,27 @@ function initStruct(filePath, options) {
   					path: pPath,
   					opVerbose: options.verbose==true,
   					opOnlyUser: options.user==true,
-  					details: null,
-  					sections: null,
+  					src_cons: null,		// constants rows read from Map file
+  					src_addr: null,		// addresses rows read from Map file
+  					sections: null,		// grouping generated
+  					res_size: null
   				}
   //console.log(struct)
   return(struct)
 }
 
 function readMapFile(struct) {
-  var tmpStruct, lines, line, row, word, idx
+  var lines, line, row, word, idx
   
   lines= FS.readFileSync(struct.file).toString().split("\n")
-  struct.details= new Array()
   debug(struct, "reading '"+struct.file+"' file")
   
+  struct.src_addr= new Array()
+  struct.src_cons= new Array()
+      
   for(i in lines) {
     line= lines[i].trim()
+    
     if(line.length>0) {
       //console.log( line )
       row= new Array()
@@ -105,7 +89,7 @@ function readMapFile(struct) {
       row["size"]= null
       // parse varType
       word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
-      rowvarType= word.trim()     
+      row.varType= word.trim()     
       // parse scope
       word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
       row.scope= word.trim() 
@@ -120,61 +104,62 @@ function readMapFile(struct) {
       row.section= word.trim()        
       
       // load new Row             
-      if(struct.opOnlyUser) {
-      	if( row.component.endsWith("_c") || row.component.endsWith("_asm") ) 
-      	  struct.details.push( row )
-      } else 
-        struct.details.push( row )
-        
+      if( row.varType=="const" ) 			struct.src_cons.push( row )
+      else if( isIncluded(struct, row) )	struct.src_addr.push( row )
+          
     }
   }
   
-  debug(struct, "parsed "+struct.details.length+" lines")
-  //console.log( struct.matrix )
+  debug(struct, "parsed "+lines.length+" lines => extracted "+struct.src_addr.length+" addresses and "+struct.src_cons.length+" constants")
+}
+
+function isIncluded(struct, row) {
+  var ret= false
+  if(struct.opOnlyUser) {
+   	if( row.component.endsWith("_c") || row.component.endsWith("_asm") || row.item=="free" )	ret= true 
+  }else 																 						ret= true 
+  
+  return ret
 }
 
 function calculateSize(struct) {
   var row, lastRow
   
   // sort by address
-  struct.details.sort( (a, b) => a.address-b.address ) //struct.matrix.sort( (a, b) => a.address.localeCompare(b.address )
-  debug(struct, "sorted by address")
+  struct.src_addr.sort( (a, b) => a.address-b.address ) //struct.matrix.sort( (a, b) => a.address.localeCompare(b.address )
   // calculate size
-  for(var idx=1; idx<struct.details.length; idx++) {
-    row= struct.details[idx]
-    lastRow= struct.details[idx-1]
+  for(var idx=1; idx<struct.src_addr.length; idx++) {
+    row= struct.src_addr[idx]
+    lastRow= struct.src_addr[idx-1]
   	if(row.address==lastRow.address)  lastRow.size= 0
   	else							  lastRow.size= row.address-lastRow.address
   }
-  debug(struct, "size calculated")
-  //console.log( struct.detail )
+  
+  debug(struct, "item size calculated")
+  //console.log( struct.details )
 }
 
-function groupBy(struct) {
+function groupingAddr(struct) {
   var detailTmp1, detailTmp2, detailTmp3, sectionTmp, componentTmp, sumItem, sumComp
   
-  // extract sections > components > items
-  debug(struct, "grouping:")
-  
+  //debug(struct, "grouping addresses:")
   struct.sections= new Array()
-  detailTmp1= struct.details.filter(row => (row.size>0)&&(row.def==false)&&(row.section.length>0));
+  detailTmp1= struct.src_addr.filter(row => (row.size>0)&&(row.def==false)&&(row.section.length>0));
   sectionTmp= [ ... new Set( detailTmp1.map(row => row.section) ) ]
-  sectionTmp= sectionTmp.sort( (a, b) => a.localeCompare(b) )
   
   for(var idx=0; idx<sectionTmp.length; idx++) {
-    debug(struct, "  L> Section: "+sectionTmp[idx])
+    //debug(struct, "  L> Section: "+sectionTmp[idx])
   
     struct.sections[idx]= { name: sectionTmp[idx], components: new Array(), size: 0 }  
     detailTmp2= detailTmp1.filter(row => row.section==sectionTmp[idx]);
-    componentTmp= [ ... new Set( detailTmp2.map(row => row.component) ) ]
-    componentTmp= componentTmp.sort( (a, b) => a.localeCompare(b) )    
+    componentTmp= [ ... new Set( detailTmp2.map(row => row.component) ) ]  
     
     for(var idy=0, sumComp=0; idy<componentTmp.length; idy++) {
-      debug(struct, "    L> Component: "+componentTmp[idy])
+      //debug(struct, "    L> Component: "+componentTmp[idy])
     
       struct.sections[idx].components[idy]= { name: componentTmp[idy], items: new Array(), size: 0 }
       detailTmp3= detailTmp2.filter(row => row.component==componentTmp[idy]);
-      detailTmp3.sort( (a, b) => b.size-a.size )
+      detailTmp3.sort( (a, b) => b.size-a.size ) // Sort by Size desc
  
       for(var idz=0, sumItem=0; idz<detailTmp3.length; idz++) {
         //debug(struct, "      -> Item ["+detailTmp3[idz].size+"]: "+detailTmp3[idz].item)
@@ -183,24 +168,77 @@ function groupBy(struct) {
         sumItem+= detailTmp3[idz].size
       }
       struct.sections[idx].components[idy].size= sumItem
-      
       sumComp+= sumItem
     }
     struct.sections[idx].size= sumComp
-    
   }
+  
+  debug(struct, "grouping calculated")
   //console.log( struct.sections )
 }
 
-function sortFilterMap(struct) {
-
-  // filters
-  struct.detail= struct.detail.filter(row => row.def != true);
-  struct.detail= struct.detail.filter(row => row.size > 0);
-  struct.detail= struct.detail.filter(row => row.component != "zx_crt_asm_m4");
+function resultsSize(struct) {
+  var detailTmp1
   
+  struct.res_size= new Array()
+  
+  detailTmp1= struct.src_addr.filter(row => (row.item=="free"))
+  struct.res_size[0]= { name: detailTmp1[0].item, size: detailTmp1[0].address }  
+  
+  detailTmp1= struct.src_cons.filter(row => (row.address>5)&&(row.item.startsWith("__"))&&(row.item.endsWith("_size")) )
+  detailTmp1.sort( (a, b) => b.address-a.address )
+  for(var idx=0; idx<detailTmp1.length; idx++) {
+    struct.res_size[idx+1]= { name: detailTmp1[idx].item, size: detailTmp1[idx].address } 
+  }
+  
+  debug(struct, "results calculated")
+  //console.log( struct.res_size )
 }
 
+function fillHead(struct, out) {
+  out.write('<?xml version="1.0" encoding="UTF-8"?> \n')
+  out.write('<?mso-application progid="Excel.Sheet"?> \n')
+  out.write('<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="https://www.w3.org/TR/html401/"> \n')
+  //out.write('<Worksheet ss:Name="'+struct.name+'"> \n')
+}
 
+function fillResume(struct, out) {
+  out.write('<Worksheet ss:Name="Resume"> \n')
+  out.write('<Table> \n')
+  out.write('      <ss:Row/> \n')
+  out.write('      <ss:Row> \n')
+  out.write('          <ss:Cell/> \n')
+  out.write('          <ss:Cell> \n')
+  out.write('              <ss:Data ss:Type="String">Total</ss:Data> \n')
+  out.write('          </ss:Cell> \n')
+  out.write('          <ss:Cell> \n')
+  out.write('              <ss:Data ss:Type="Number">-45</ss:Data> \n')
+  out.write('          </ss:Cell> \n')
+  out.write('      </ss:Row> \n')
+  out.write('</Table> \n')
+  out.write('</Worksheet> \n')
+}
+
+function fillSections(struct, out) {
+  out.write('<Worksheet ss:Name="GroupedItems"> \n')
+  out.write('<Table> \n')
+  out.write('      <ss:Row/> \n')
+  out.write('      <ss:Row> \n')
+  out.write('          <ss:Cell/> \n')
+  out.write('          <ss:Cell> \n')
+  out.write('              <ss:Data ss:Type="String">Total</ss:Data> \n')
+  out.write('          </ss:Cell> \n')
+  out.write('          <ss:Cell> \n')
+  out.write('              <ss:Data ss:Type="Number">-45</ss:Data> \n')
+  out.write('          </ss:Cell> \n')
+  out.write('      </ss:Row> \n')
+  out.write('</Table> \n')
+  out.write('</Worksheet> \n')
+}
+
+function fillFoot(struct, out) {
+  //out.write('</Worksheet> \n')
+  out.write('</Workbook> \n')
+}
 
 
