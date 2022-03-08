@@ -1,7 +1,7 @@
 const FS= require('fs')
 // https://www.z88dk.org/forum/viewtopic.php?t=10253
 // http://m8y.org/Microsoft_Office_2003_XML_Reference_Schemas/Help/html/spreadsheetml_HV01151864.htm
-//__code_compiler_size
+// http://m8y.org/Microsoft_Office_2003_XML_Reference_Schemas/Help/html/spreadsheetml_HV01151864.htm
 
 module.exports= { checkFile, mainScan }
 
@@ -188,7 +188,7 @@ function resultsSize(struct) {
   detailTmp1= struct.src_cons.filter(row => (row.address>5)&&(row.item.startsWith("__"))&&(row.item.endsWith("_size")) )
   detailTmp1.sort( (a, b) => b.address-a.address )
   for(var idx=0; idx<detailTmp1.length; idx++) {
-    struct.res_size[idx+1]= { name: detailTmp1[idx].item, size: detailTmp1[idx].address } 
+    struct.res_size[idx+1]= { name: detailTmp1[idx].item.substr(2), size: detailTmp1[idx].address } 
   }
   
   debug(struct, "results calculated")
@@ -199,40 +199,39 @@ function fillHead(struct, out) {
   out.write('<?xml version="1.0" encoding="UTF-8"?> \n')
   out.write('<?mso-application progid="Excel.Sheet"?> \n')
   out.write('<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="https://www.w3.org/TR/html401/"> \n')
-  //out.write('<Worksheet ss:Name="'+struct.name+'"> \n')
+  out.write('<Styles> <Style ss:ID="s23"> <Font x:Family="Swiss" ss:Bold="1"/> </Style> </Styles> \n')
 }
 
 function fillResume(struct, out) {
+  var row
+  
   out.write('<Worksheet ss:Name="Resume"> \n')
   out.write('<Table> \n')
-  out.write('      <ss:Row/> \n')
-  out.write('      <ss:Row> \n')
-  out.write('          <ss:Cell/> \n')
-  out.write('          <ss:Cell> \n')
-  out.write('              <ss:Data ss:Type="String">Total</ss:Data> \n')
-  out.write('          </ss:Cell> \n')
-  out.write('          <ss:Cell> \n')
-  out.write('              <ss:Data ss:Type="Number">-45</ss:Data> \n')
-  out.write('          </ss:Cell> \n')
-  out.write('      </ss:Row> \n')
+  out.write('<tableColumns count="3"> tableColumn id="1" name="Expenses" tableColumn id="2" name="Amount" tableColumn id="3" name="Date Paid" </tableColumns> \n')
+  out.write('<Column ss:Index="2" ss:AutoFitWidth="1" ss:Width="130"/> \n')
+  out.write('    <Row/> \n')
+  out.write('    <Row> <Cell/> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">Name</Data> </Cell> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">Size(bytes)</Data> </Cell> \n')
+  out.write('    </Row> \n') 
+  
+    for(var idx=0; idx<struct.res_size.length; idx++) {
+      row= struct.res_size[idx]
+      
+  out.write('    <Row> <Cell/> \n')
+  out.write('          <Cell> <Data ss:Type="String">'+row.name+'</Data> </Cell> \n')
+  out.write('          <Cell> <Data ss:Type="Number">'+row.size+'</Data> </Cell> \n')
+  out.write('    </Row> \n')
+  
+    }
+  
   out.write('</Table> \n')
   out.write('</Worksheet> \n')
 }
 
 function fillSections(struct, out) {
   out.write('<Worksheet ss:Name="GroupedItems"> \n')
-  out.write('<Table> \n')
-  out.write('      <ss:Row/> \n')
-  out.write('      <ss:Row> \n')
-  out.write('          <ss:Cell/> \n')
-  out.write('          <ss:Cell> \n')
-  out.write('              <ss:Data ss:Type="String">Total</ss:Data> \n')
-  out.write('          </ss:Cell> \n')
-  out.write('          <ss:Cell> \n')
-  out.write('              <ss:Data ss:Type="Number">-45</ss:Data> \n')
-  out.write('          </ss:Cell> \n')
-  out.write('      </ss:Row> \n')
-  out.write('</Table> \n')
+
   out.write('</Worksheet> \n')
 }
 
