@@ -1,7 +1,7 @@
 const FS= require('fs')
 // https://www.z88dk.org/forum/viewtopic.php?t=10253
 // http://m8y.org/Microsoft_Office_2003_XML_Reference_Schemas/Help/html/spreadsheetml_HV01151864.htm
-// http://m8y.org/Microsoft_Office_2003_XML_Reference_Schemas/Help/html/spreadsheetml_HV01151864.htm
+// http://officeopenxml.com/SSstyles.php
 
 module.exports= { checkFile, mainScan }
 
@@ -103,10 +103,12 @@ function readMapFile(struct) {
       word= line.slice( 0, idx= line.indexOf(",") ); line= line.substr(idx+1)
       row.section= word.trim()        
       
-      // load new Row             
-      if( row.varType=="const" ) 			struct.src_cons.push( row )
-      else if( isIncluded(struct, row) )	struct.src_addr.push( row )
-          
+      // load new Row
+      if( row.address <= 65535 ) {	// if addr > $FFFF ==> it's an error
+        if( row.varType=="const" ) 			struct.src_cons.push( row )
+        else if( isIncluded(struct, row) )	struct.src_addr.push( row )
+      } 
+      
     }
   }
   
@@ -115,10 +117,8 @@ function readMapFile(struct) {
 
 function isIncluded(struct, row) {
   var ret= false
-  if(struct.opOnlyUser) {
-   	if( row.component.endsWith("_c") || row.component.endsWith("_asm") || row.item=="free" )	ret= true 
-  }else 																 						ret= true 
-  
+  if(!struct.opOnlyUser)													{ ret= true }
+  else if( row.component.endsWith("_c") || row.component.endsWith("_asm") )	{ ret= true }
   return ret
 }
 
@@ -181,14 +181,11 @@ function resultsSize(struct) {
   var detailTmp1
   
   struct.res_size= new Array()
-  
-  detailTmp1= struct.src_addr.filter(row => (row.item=="free"))
-  struct.res_size[0]= { name: detailTmp1[0].item, size: detailTmp1[0].address }  
-  
-  detailTmp1= struct.src_cons.filter(row => (row.address>5)&&(row.item.startsWith("__"))&&(row.item.endsWith("_size")) )
+    
+  detailTmp1= struct.src_cons.filter(row => (row.address>0)&&(row.item.startsWith("__"))&&(row.item.endsWith("_size")) )
   detailTmp1.sort( (a, b) => b.address-a.address )
   for(var idx=0; idx<detailTmp1.length; idx++) {
-    struct.res_size[idx+1]= { name: detailTmp1[idx].item.substr(2), size: detailTmp1[idx].address } 
+    struct.res_size[idx]= { name: detailTmp1[idx].item, size: detailTmp1[idx].address } 
   }
   
   debug(struct, "results calculated")
@@ -199,7 +196,7 @@ function fillHead(struct, out) {
   out.write('<?xml version="1.0" encoding="UTF-8"?> \n')
   out.write('<?mso-application progid="Excel.Sheet"?> \n')
   out.write('<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="https://www.w3.org/TR/html401/"> \n')
-  out.write('<Styles> <Style ss:ID="s23"> <Font x:Family="Swiss" ss:Bold="1"/> </Style> </Styles> \n')
+  out.write('<Styles> <Style ss:ID="s23"> <Font x:Family="Swiss" ss:Bold="1"/> <Fill x:PatternFill="solid"/> </Style> </Styles> \n')
 }
 
 function fillResume(struct, out) {
@@ -207,36 +204,84 @@ function fillResume(struct, out) {
   
   out.write('<Worksheet ss:Name="Resume"> \n')
   out.write('<Table> \n')
-  out.write('<tableColumns count="3"> tableColumn id="1" name="Expenses" tableColumn id="2" name="Amount" tableColumn id="3" name="Date Paid" </tableColumns> \n')
-  out.write('<Column ss:Index="2" ss:AutoFitWidth="1" ss:Width="130"/> \n')
+  out.write('<Column ss:Index="2" ss:AutoFitWidth="1" ss:Width="130"/> <Column ss:Index="3" ss:Width="55"/>\n')
   out.write('    <Row/> \n')
   out.write('    <Row> <Cell/> \n')
   out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">Name</Data> </Cell> \n')
   out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">Size(bytes)</Data> </Cell> \n')
   out.write('    </Row> \n') 
   
-    for(var idx=0; idx<struct.res_size.length; idx++) {
-      row= struct.res_size[idx]
+  for(var idx=0; idx<struct.res_size.length; idx++) {
+    row= struct.res_size[idx]
       
   out.write('    <Row> <Cell/> \n')
   out.write('          <Cell> <Data ss:Type="String">'+row.name+'</Data> </Cell> \n')
   out.write('          <Cell> <Data ss:Type="Number">'+row.size+'</Data> </Cell> \n')
   out.write('    </Row> \n')
   
-    }
+  }
   
   out.write('</Table> \n')
   out.write('</Worksheet> \n')
 }
 
 function fillSections(struct, out) {
+  var row1, row2
+  
   out.write('<Worksheet ss:Name="GroupedItems"> \n')
+  out.write('<Table> \n')
+  out.write('<Column ss:Index="2" ss:Width="110"/> <Column ss:Index="3" ss:Width="110"/> <Column ss:Index="4" ss:Width="150"/>\n')
+  out.write('    <Row/> \n')
+  out.write('    <Row> <Cell/> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">Section</Data> </Cell> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">Component</Data> </Cell> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">Item</Data> </Cell> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">SizeItem</Data> </Cell> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">SumCom</Data> </Cell> \n')
+  out.write('          <Cell ss:StyleID="s23"> <Data ss:Type="String">SumSect</Data> </Cell> \n')
+  out.write('    </Row> \n') 
 
+  for(var idx=0; idx<struct.sections.length; idx++) {
+    row1= struct.sections[idx]
+
+  out.write('    <Row> <Cell/> \n')
+  out.write('          <Cell> <Data ss:Type="String">'+row1.name+'</Data> </Cell> \n')
+  out.write('    </Row> \n')
+
+    for(var idy=0; idy<row1.components.length; idy++) {
+      row2= row1.components[idy]
+    
+  out.write('    <Row> <Cell/> <Cell/> \n')
+  out.write('          <Cell> <Data ss:Type="String">'+row2.name+'</Data> </Cell> \n')
+  out.write('    </Row> \n')   
+    
+      for(var idz=0; idz<row2.items.length; idz++) {
+        row3= row2.items[idz]
+    
+  out.write('    <Row> <Cell/> <Cell/> <Cell/> \n')
+  out.write('          <Cell> <Data ss:Type="String">'+row3.name+'</Data> </Cell> \n')
+  out.write('          <Cell> <Data ss:Type="Number">'+row3.size+'</Data> </Cell> \n')
+  out.write('    </Row> \n')   
+    
+      }
+        
+  out.write('    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>\n')
+  out.write('          <Cell> <Data ss:Type="Number">'+row2.size+'</Data> </Cell> \n')            
+  out.write('    </Row> \n')        
+    
+    }
+
+  out.write('    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>\n')
+  out.write('          <Cell> <Data ss:Type="Number">'+row1.size+'</Data> </Cell> \n') 
+  out.write('    </Row> \n')  
+     
+  }
+
+  out.write('</Table> \n')
   out.write('</Worksheet> \n')
 }
 
 function fillFoot(struct, out) {
-  //out.write('</Worksheet> \n')
   out.write('</Workbook> \n')
 }
 
