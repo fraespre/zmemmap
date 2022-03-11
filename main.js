@@ -2,6 +2,8 @@ const FS= require('fs')
 // https://www.z88dk.org/forum/viewtopic.php?t=10253
 // http://m8y.org/Microsoft_Office_2003_XML_Reference_Schemas/Help/html/spreadsheetml_HV01151864.htm
 // http://officeopenxml.com/SSstyles.php
+// https://firstclassjs.com/remove-duplicate-objects-from-javascript-array-how-to-performance-comparison/
+// https://appdividend.com/2022/01/29/javascript-array-find/
 
 module.exports= { checkFile, mainScan }
 
@@ -292,6 +294,7 @@ function fillSections(struct, out) {
 
 function fillFoot(struct, out) {
   out.write('</Workbook> \n')
+  debug(struct, "output for Excel generated")
 }
 
 
