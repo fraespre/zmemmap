@@ -100,6 +100,7 @@
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Section</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Component</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Item</Data> </Cell> 
+          <Cell ss:StyleID="s23"> <Data ss:Type="String">Scope</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SizeItem</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SumCom</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SumSect</Data> </Cell> 
@@ -112,20 +113,23 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__Restart_2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">36</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__Restart</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">3</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__Start</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">40</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">40</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -136,12 +140,13 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__Exit</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -152,35 +157,27 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_heap_init</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">34</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">39</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">34</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">39</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">34</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">39</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
           <Cell> <Data ss:Type="String">code_arch</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">zx_cxy2saddr_callee</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_zx_cxy2saddr_callee</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_zx_cxy2saddr</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_zx_cxy2saddr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">15</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">15</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -188,9 +185,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_zx_border</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">16</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">16</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -198,9 +196,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_zx_cls</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">10</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">10</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -208,9 +207,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_zx_cls_attr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">14</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">14</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -218,17 +218,19 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm0_zx_cls_pix</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">10</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_zx_cls_pix</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">7</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">17</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">77</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">72</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
           <Cell> <Data ss:Type="String">code_error</Data> </Cell> 
@@ -238,9 +240,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">error_enolck_zc</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -248,9 +251,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">errno_zc</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">12</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">12</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -258,12 +262,13 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">error_zc</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">19</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -274,9 +279,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_in_wait_key</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -284,39 +290,36 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_in_test_key</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">17</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
-          <Cell> <Data ss:Type="String">code_l</Data> </Cell> 
+          <Cell> <Data ss:Type="String">data_threads</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_ret</Data> </Cell> 
+          <Cell> <Data ss:Type="String">zx_crt_asm_m4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_ret</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">33</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">33</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_setmem_hl</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_setmem</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+          <Cell> <Data ss:Type="String">__thread_unblock</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">34</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">__thrd_id</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">35</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">35</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
           <Cell> <Data ss:Type="String">code_threads_mutex</Data> </Cell> 
@@ -326,16 +329,18 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">asm_mtx_init</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">26</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">unknown_type</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">31</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">31</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -346,204 +351,188 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_main</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">378</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_util_bin2str</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">88</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">__getReductionType</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">46</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopDrawStrM</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">37</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_util_num2str</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">36</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">reductionType1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">32</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopDrawStr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">29</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_util_bin2str_00126</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">27</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_util_bin2str_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">24</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">writeChar</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">22</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">endReduction</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">20</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_printStringMini</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">19</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__printCharMini</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">19</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopDrawChar</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">18</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopScanHigh2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">16</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_util_bin2str</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_util_bin2str_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__getRow</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_printString</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__printCharHigh</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">reductionType2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__recoverVideo</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopScanMini</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">writeReduction</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__getReductionType_00120</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">10</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__getReductionType_00122</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">10</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">SCAN1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">10</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">int2Dec_num2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__printChar</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">SCAN</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">DUMPCHAR</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">reductionType0</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__getReductionType_00119</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__getReductionType_00121</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">buffer_rotate</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">8</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">num_string</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_setStyle</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_util_bin2str_00108</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">SCAN0</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">DUMP</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">endLoop</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_setCharset</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__getReductionType</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">4</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_util_bin2str_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__getReductionType_00105</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopScanHigh1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">3</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">int2Dec_num1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__getReductionType_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_util_bin2str_00125</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__getReductionType_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">char_isRight</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">944</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">944</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -554,108 +543,133 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_17</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">64</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_20</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">61</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_21</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">61</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_22</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">60</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_19</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">58</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_16</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">54</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_15</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">52</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_18</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">48</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_14</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">41</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_23</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">30</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_24</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">30</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">23</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__getReductionType_set1_65536_283</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_13</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">19</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__getReductionType_set2_65536_283</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">12</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_11</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_12</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_4</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_5</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_6</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_7</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_8</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_9</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_10</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">660</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">660</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -666,12 +680,13 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__malloc_heap</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -682,28 +697,13 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_GLOBAL_ZX_PORT_FE</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> 
-          <Cell> <Data ss:Type="String">data_threads</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">zx_crt_asm_m4</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__thrd_id</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -714,12 +714,13 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_errno</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -730,16 +731,18 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__exit_stack</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__quickexit_stack</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -750,28 +753,33 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_charset</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_row</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_video</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_string</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_style</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
 </Table> 

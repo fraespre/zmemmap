@@ -1,0 +1,1362 @@
+1     0000              MODULE text01_c
+2     0000              LINE 0, "text01.c"
+0     0000              
+1     0000              ;--------------------------------------------------------
+2     0000              ; File Created by SDCC : free open source ANSI-C Compiler
+3     0000              ; Version 4.1.6 #12555 (MINGW64)
+4     0000              ;--------------------------------------------------------
+5     0000              ; Processed by Z88DK
+6     0000              ;--------------------------------------------------------
+7     0000              
+8     0000              	EXTERN __divschar
+9     0000              	EXTERN __divschar_callee
+10    0000              	EXTERN __divsint
+11    0000              	EXTERN __divsint_callee
+12    0000              	EXTERN __divslong
+13    0000              	EXTERN __divslong_callee
+14    0000              	EXTERN __divslonglong
+15    0000              	EXTERN __divslonglong_callee
+16    0000              	EXTERN __divsuchar
+17    0000              	EXTERN __divsuchar_callee
+18    0000              	EXTERN __divuchar
+19    0000              	EXTERN __divuchar_callee
+20    0000              	EXTERN __divuint
+21    0000              	EXTERN __divuint_callee
+22    0000              	EXTERN __divulong
+23    0000              	EXTERN __divulong_callee
+24    0000              	EXTERN __divulonglong
+25    0000              	EXTERN __divulonglong_callee
+26    0000              	EXTERN __divuschar
+27    0000              	EXTERN __divuschar_callee
+28    0000              	EXTERN __modschar
+29    0000              	EXTERN __modschar_callee
+30    0000              	EXTERN __modsint
+31    0000              	EXTERN __modsint_callee
+32    0000              	EXTERN __modslong
+33    0000              	EXTERN __modslong_callee
+34    0000              	EXTERN __modslonglong
+35    0000              	EXTERN __modslonglong_callee
+36    0000              	EXTERN __modsuchar
+37    0000              	EXTERN __modsuchar_callee
+38    0000              	EXTERN __moduchar
+39    0000              	EXTERN __moduchar_callee
+40    0000              	EXTERN __moduint
+41    0000              	EXTERN __moduint_callee
+42    0000              	EXTERN __modulong
+43    0000              	EXTERN __modulong_callee
+44    0000              	EXTERN __modulonglong
+45    0000              	EXTERN __modulonglong_callee
+46    0000              	EXTERN __moduschar
+47    0000              	EXTERN __moduschar_callee
+48    0000              	EXTERN __mulint
+49    0000              	EXTERN __mulint_callee
+50    0000              	EXTERN __mullong
+51    0000              	EXTERN __mullong_callee
+52    0000              	EXTERN __mullonglong
+53    0000              	EXTERN __mullonglong_callee
+54    0000              	EXTERN __mulschar
+55    0000              	EXTERN __mulschar_callee
+56    0000              	EXTERN __mulsuchar
+57    0000              	EXTERN __mulsuchar_callee
+58    0000              	EXTERN __muluchar
+59    0000              	EXTERN __muluchar_callee
+60    0000              	EXTERN __muluschar
+61    0000              	EXTERN __muluschar_callee
+62    0000              	EXTERN __rlslonglong
+63    0000              	EXTERN __rlslonglong_callee
+64    0000              	EXTERN __rlulonglong
+65    0000              	EXTERN __rlulonglong_callee
+66    0000              	EXTERN __rrslonglong
+67    0000              	EXTERN __rrslonglong_callee
+68    0000              	EXTERN __rrulonglong
+69    0000              	EXTERN __rrulonglong_callee
+70    0000              	EXTERN ___sdcc_call_hl
+71    0000              	EXTERN ___sdcc_call_iy
+72    0000              	EXTERN ___sdcc_enter_ix
+73    0000              	EXTERN banked_call
+74    0000              	EXTERN _banked_ret
+75    0000              	EXTERN ___fs2schar
+76    0000              	EXTERN ___fs2schar_callee
+77    0000              	EXTERN ___fs2sint
+78    0000              	EXTERN ___fs2sint_callee
+79    0000              	EXTERN ___fs2slong
+80    0000              	EXTERN ___fs2slong_callee
+81    0000              	EXTERN ___fs2slonglong
+82    0000              	EXTERN ___fs2slonglong_callee
+83    0000              	EXTERN ___fs2uchar
+84    0000              	EXTERN ___fs2uchar_callee
+85    0000              	EXTERN ___fs2uint
+86    0000              	EXTERN ___fs2uint_callee
+87    0000              	EXTERN ___fs2ulong
+88    0000              	EXTERN ___fs2ulong_callee
+89    0000              	EXTERN ___fs2ulonglong
+90    0000              	EXTERN ___fs2ulonglong_callee
+91    0000              	EXTERN ___fsadd
+92    0000              	EXTERN ___fsadd_callee
+93    0000              	EXTERN ___fsdiv
+94    0000              	EXTERN ___fsdiv_callee
+95    0000              	EXTERN ___fseq
+96    0000              	EXTERN ___fseq_callee
+97    0000              	EXTERN ___fsgt
+98    0000              	EXTERN ___fsgt_callee
+99    0000              	EXTERN ___fslt
+100   0000              	EXTERN ___fslt_callee
+101   0000              	EXTERN ___fsmul
+102   0000              	EXTERN ___fsmul_callee
+103   0000              	EXTERN ___fsneq
+104   0000              	EXTERN ___fsneq_callee
+105   0000              	EXTERN ___fssub
+106   0000              	EXTERN ___fssub_callee
+107   0000              	EXTERN ___schar2fs
+108   0000              	EXTERN ___schar2fs_callee
+109   0000              	EXTERN ___sint2fs
+110   0000              	EXTERN ___sint2fs_callee
+111   0000              	EXTERN ___slong2fs
+112   0000              	EXTERN ___slong2fs_callee
+113   0000              	EXTERN ___slonglong2fs
+114   0000              	EXTERN ___slonglong2fs_callee
+115   0000              	EXTERN ___uchar2fs
+116   0000              	EXTERN ___uchar2fs_callee
+117   0000              	EXTERN ___uint2fs
+118   0000              	EXTERN ___uint2fs_callee
+119   0000              	EXTERN ___ulong2fs
+120   0000              	EXTERN ___ulong2fs_callee
+121   0000              	EXTERN ___ulonglong2fs
+122   0000              	EXTERN ___ulonglong2fs_callee
+123   0000              	EXTERN ____sdcc_2_copy_src_mhl_dst_deix
+124   0000              	EXTERN ____sdcc_2_copy_src_mhl_dst_bcix
+125   0000              	EXTERN ____sdcc_4_copy_src_mhl_dst_deix
+126   0000              	EXTERN ____sdcc_4_copy_src_mhl_dst_bcix
+127   0000              	EXTERN ____sdcc_4_copy_src_mhl_dst_mbc
+128   0000              	EXTERN ____sdcc_4_ldi_nosave_bc
+129   0000              	EXTERN ____sdcc_4_ldi_save_bc
+130   0000              	EXTERN ____sdcc_4_push_hlix
+131   0000              	EXTERN ____sdcc_4_push_mhl
+132   0000              	EXTERN ____sdcc_lib_setmem_hl
+133   0000              	EXTERN ____sdcc_ll_add_de_bc_hl
+134   0000              	EXTERN ____sdcc_ll_add_de_bc_hlix
+135   0000              	EXTERN ____sdcc_ll_add_de_hlix_bc
+136   0000              	EXTERN ____sdcc_ll_add_de_hlix_bcix
+137   0000              	EXTERN ____sdcc_ll_add_deix_bc_hl
+138   0000              	EXTERN ____sdcc_ll_add_deix_hlix
+139   0000              	EXTERN ____sdcc_ll_add_hlix_bc_deix
+140   0000              	EXTERN ____sdcc_ll_add_hlix_deix_bc
+141   0000              	EXTERN ____sdcc_ll_add_hlix_deix_bcix
+142   0000              	EXTERN ____sdcc_ll_asr_hlix_a
+143   0000              	EXTERN ____sdcc_ll_asr_mbc_a
+144   0000              	EXTERN ____sdcc_ll_copy_src_de_dst_hlix
+145   0000              	EXTERN ____sdcc_ll_copy_src_de_dst_hlsp
+146   0000              	EXTERN ____sdcc_ll_copy_src_deix_dst_hl
+147   0000              	EXTERN ____sdcc_ll_copy_src_deix_dst_hlix
+148   0000              	EXTERN ____sdcc_ll_copy_src_deixm_dst_hlsp
+149   0000              	EXTERN ____sdcc_ll_copy_src_desp_dst_hlsp
+150   0000              	EXTERN ____sdcc_ll_copy_src_hl_dst_de
+151   0000              	EXTERN ____sdcc_ll_copy_src_hlsp_dst_de
+152   0000              	EXTERN ____sdcc_ll_copy_src_hlsp_dst_deixm
+153   0000              	EXTERN ____sdcc_ll_lsl_hlix_a
+154   0000              	EXTERN ____sdcc_ll_lsl_mbc_a
+155   0000              	EXTERN ____sdcc_ll_lsr_hlix_a
+156   0000              	EXTERN ____sdcc_ll_lsr_mbc_a
+157   0000              	EXTERN ____sdcc_ll_push_hlix
+158   0000              	EXTERN ____sdcc_ll_push_mhl
+159   0000              	EXTERN ____sdcc_ll_sub_de_bc_hl
+160   0000              	EXTERN ____sdcc_ll_sub_de_bc_hlix
+161   0000              	EXTERN ____sdcc_ll_sub_de_hlix_bc
+162   0000              	EXTERN ____sdcc_ll_sub_de_hlix_bcix
+163   0000              	EXTERN ____sdcc_ll_sub_deix_bc_hl
+164   0000              	EXTERN ____sdcc_ll_sub_deix_hlix
+165   0000              	EXTERN ____sdcc_ll_sub_hlix_bc_deix
+166   0000              	EXTERN ____sdcc_ll_sub_hlix_deix_bc
+167   0000              	EXTERN ____sdcc_ll_sub_hlix_deix_bcix
+168   0000              	EXTERN ____sdcc_load_debc_deix
+169   0000              	EXTERN ____sdcc_load_dehl_deix
+170   0000              	EXTERN ____sdcc_load_debc_mhl
+171   0000              	EXTERN ____sdcc_load_hlde_mhl
+172   0000              	EXTERN ____sdcc_store_dehl_bcix
+173   0000              	EXTERN ____sdcc_store_debc_hlix
+174   0000              	EXTERN ____sdcc_store_debc_mhl
+175   0000              	EXTERN ____sdcc_cpu_pop_ei
+176   0000              	EXTERN ____sdcc_cpu_pop_ei_jp
+177   0000              	EXTERN ____sdcc_cpu_push_di
+178   0000              	EXTERN ____sdcc_outi
+179   0000              	EXTERN ____sdcc_outi_128
+180   0000              	EXTERN ____sdcc_outi_256
+181   0000              	EXTERN ____sdcc_ldi
+182   0000              	EXTERN ____sdcc_ldi_128
+183   0000              	EXTERN ____sdcc_ldi_256
+184   0000              	EXTERN ____sdcc_4_copy_srcd_hlix_dst_deix
+185   0000              	EXTERN ____sdcc_4_and_src_mbc_mhl_dst_deix
+186   0000              	EXTERN ____sdcc_4_or_src_mbc_mhl_dst_deix
+187   0000              	EXTERN ____sdcc_4_xor_src_mbc_mhl_dst_deix
+188   0000              	EXTERN ____sdcc_4_or_src_dehl_dst_bcix
+189   0000              	EXTERN ____sdcc_4_xor_src_dehl_dst_bcix
+190   0000              	EXTERN ____sdcc_4_and_src_dehl_dst_bcix
+191   0000              	EXTERN ____sdcc_4_xor_src_mbc_mhl_dst_debc
+192   0000              	EXTERN ____sdcc_4_or_src_mbc_mhl_dst_debc
+193   0000              	EXTERN ____sdcc_4_and_src_mbc_mhl_dst_debc
+194   0000              	EXTERN ____sdcc_4_cpl_src_mhl_dst_debc
+195   0000              	EXTERN ____sdcc_4_xor_src_debc_mhl_dst_debc
+196   0000              	EXTERN ____sdcc_4_or_src_debc_mhl_dst_debc
+197   0000              	EXTERN ____sdcc_4_and_src_debc_mhl_dst_debc
+198   0000              	EXTERN ____sdcc_4_and_src_debc_hlix_dst_debc
+199   0000              	EXTERN ____sdcc_4_or_src_debc_hlix_dst_debc
+200   0000              	EXTERN ____sdcc_4_xor_src_debc_hlix_dst_debc
+201   0000              
+202   0000              ;--------------------------------------------------------
+203   0000              ; Public variables in this module
+204   0000              ;--------------------------------------------------------
+205   0000              	GLOBAL _main
+206   0000              	GLOBAL _printStringMini
+207   0000              	GLOBAL _printString
+208   0000              	GLOBAL _util_num2str
+209   0000              	GLOBAL _util_bin2str
+210   0000              	GLOBAL _setStyle
+211   0000              	GLOBAL _setCharset
+212   0000              ;--------------------------------------------------------
+213   0000              ; Externals used
+214   0000              ;--------------------------------------------------------
+215   0000              	GLOBAL _zx_pattern_fill_callee
+216   0000              	GLOBAL _zx_pattern_fill
+217   0000              	GLOBAL _zx_saddrpup_fastcall
+218   0000              	GLOBAL _zx_saddrpup
+219   0000              	GLOBAL _zx_saddrpright_callee
+220   0000              	GLOBAL _zx_saddrpright
+221   0000              	GLOBAL _zx_saddrpleft_callee
+222   0000              	GLOBAL _zx_saddrpleft
+223   0000              	GLOBAL _zx_saddrpdown_fastcall
+224   0000              	GLOBAL _zx_saddrpdown
+225   0000              	GLOBAL _zx_saddrcup_fastcall
+226   0000              	GLOBAL _zx_saddrcup
+227   0000              	GLOBAL _zx_saddrcright_fastcall
+228   0000              	GLOBAL _zx_saddrcright
+229   0000              	GLOBAL _zx_saddrcleft_fastcall
+230   0000              	GLOBAL _zx_saddrcleft
+231   0000              	GLOBAL _zx_saddrcdown_fastcall
+232   0000              	GLOBAL _zx_saddrcdown
+233   0000              	GLOBAL _zx_saddr2py_fastcall
+234   0000              	GLOBAL _zx_saddr2py
+235   0000              	GLOBAL _zx_saddr2px_fastcall
+236   0000              	GLOBAL _zx_saddr2px
+237   0000              	GLOBAL _zx_saddr2cy_fastcall
+238   0000              	GLOBAL _zx_saddr2cy
+239   0000              	GLOBAL _zx_saddr2cx_fastcall
+240   0000              	GLOBAL _zx_saddr2cx
+241   0000              	GLOBAL _zx_saddr2aaddr_fastcall
+242   0000              	GLOBAL _zx_saddr2aaddr
+243   0000              	GLOBAL _zx_py2saddr_fastcall
+244   0000              	GLOBAL _zx_py2saddr
+245   0000              	GLOBAL _zx_py2aaddr_fastcall
+246   0000              	GLOBAL _zx_py2aaddr
+247   0000              	GLOBAL _zx_pxy2saddr_callee
+248   0000              	GLOBAL _zx_pxy2saddr
+249   0000              	GLOBAL _zx_pxy2aaddr_callee
+250   0000              	GLOBAL _zx_pxy2aaddr
+251   0000              	GLOBAL _zx_px2bitmask_fastcall
+252   0000              	GLOBAL _zx_px2bitmask
+253   0000              	GLOBAL _zx_cy2saddr_fastcall
+254   0000              	GLOBAL _zx_cy2saddr
+255   0000              	GLOBAL _zx_cy2aaddr_fastcall
+256   0000              	GLOBAL _zx_cy2aaddr
+257   0000              	GLOBAL _zx_cxy2saddr_callee
+258   0000              	GLOBAL _zx_cxy2saddr
+259   0000              	GLOBAL _zx_cxy2aaddr_callee
+260   0000              	GLOBAL _zx_cxy2aaddr
+261   0000              	GLOBAL _zx_bitmask2px_fastcall
+262   0000              	GLOBAL _zx_bitmask2px
+263   0000              	GLOBAL _zx_aaddrcup_fastcall
+264   0000              	GLOBAL _zx_aaddrcup
+265   0000              	GLOBAL _zx_aaddrcright_fastcall
+266   0000              	GLOBAL _zx_aaddrcright
+267   0000              	GLOBAL _zx_aaddrcleft_fastcall
+268   0000              	GLOBAL _zx_aaddrcleft
+269   0000              	GLOBAL _zx_aaddrcdown_fastcall
+270   0000              	GLOBAL _zx_aaddrcdown
+271   0000              	GLOBAL _zx_aaddr2saddr_fastcall
+272   0000              	GLOBAL _zx_aaddr2saddr
+273   0000              	GLOBAL _zx_aaddr2py_fastcall
+274   0000              	GLOBAL _zx_aaddr2py
+275   0000              	GLOBAL _zx_aaddr2px_fastcall
+276   0000              	GLOBAL _zx_aaddr2px
+277   0000              	GLOBAL _zx_aaddr2cy_fastcall
+278   0000              	GLOBAL _zx_aaddr2cy
+279   0000              	GLOBAL _zx_aaddr2cx_fastcall
+280   0000              	GLOBAL _zx_aaddr2cx
+281   0000              	GLOBAL _zx_visit_wc_pix_callee
+282   0000              	GLOBAL _zx_visit_wc_pix
+283   0000              	GLOBAL _zx_visit_wc_attr_callee
+284   0000              	GLOBAL _zx_visit_wc_attr
+285   0000              	GLOBAL _zx_scroll_wc_up_pix_callee
+286   0000              	GLOBAL _zx_scroll_wc_up_pix
+287   0000              	GLOBAL _zx_scroll_wc_up_attr_callee
+288   0000              	GLOBAL _zx_scroll_wc_up_attr
+289   0000              	GLOBAL _zx_scroll_wc_up_callee
+290   0000              	GLOBAL _zx_scroll_wc_up
+291   0000              	GLOBAL _zx_scroll_up_pix_callee
+292   0000              	GLOBAL _zx_scroll_up_pix
+293   0000              	GLOBAL _zx_scroll_up_attr_callee
+294   0000              	GLOBAL _zx_scroll_up_attr
+295   0000              	GLOBAL _zx_scroll_up_callee
+296   0000              	GLOBAL _zx_scroll_up
+297   0000              	GLOBAL _zx_cls_wc_pix_callee
+298   0000              	GLOBAL _zx_cls_wc_pix
+299   0000              	GLOBAL _zx_cls_wc_attr_callee
+300   0000              	GLOBAL _zx_cls_wc_attr
+301   0000              	GLOBAL _zx_cls_wc_callee
+302   0000              	GLOBAL _zx_cls_wc
+303   0000              	GLOBAL _zx_cls_pix_fastcall
+304   0000              	GLOBAL _zx_cls_pix
+305   0000              	GLOBAL _zx_cls_attr_fastcall
+306   0000              	GLOBAL _zx_cls_attr
+307   0000              	GLOBAL _zx_cls_fastcall
+308   0000              	GLOBAL _zx_cls
+309   0000              	GLOBAL _zx_border_fastcall
+310   0000              	GLOBAL _zx_border
+311   0000              	GLOBAL _zx_tape_verify_block_callee
+312   0000              	GLOBAL _zx_tape_verify_block
+313   0000              	GLOBAL _zx_tape_save_block_callee
+314   0000              	GLOBAL _zx_tape_save_block
+315   0000              	GLOBAL _zx_tape_load_block_callee
+316   0000              	GLOBAL _zx_tape_load_block
+317   0000              	GLOBAL _in_mouse_kempston_wheel_delta
+318   0000              	GLOBAL _in_mouse_kempston_wheel
+319   0000              	GLOBAL _in_mouse_kempston_callee
+320   0000              	GLOBAL _in_mouse_kempston
+321   0000              	GLOBAL _in_mouse_kempston_setpos_callee
+322   0000              	GLOBAL _in_mouse_kempston_setpos
+323   0000              	GLOBAL _in_mouse_kempston_reset
+324   0000              	GLOBAL _in_mouse_kempston_init
+325   0000              	GLOBAL _in_mouse_amx_wheel_delta
+326   0000              	GLOBAL _in_mouse_amx_wheel
+327   0000              	GLOBAL _in_mouse_amx_callee
+328   0000              	GLOBAL _in_mouse_amx
+329   0000              	GLOBAL _in_mouse_amx_setpos_callee
+330   0000              	GLOBAL _in_mouse_amx_setpos
+331   0000              	GLOBAL _in_mouse_amx_reset
+332   0000              	GLOBAL _in_mouse_amx_init_callee
+333   0000              	GLOBAL _in_mouse_amx_init
+334   0000              	GLOBAL _in_stick_sinclair2
+335   0000              	GLOBAL _in_stick_sinclair1
+336   0000              	GLOBAL _in_stick_kempston
+337   0000              	GLOBAL _in_stick_fuller
+338   0000              	GLOBAL _in_stick_cursor
+339   0000              	GLOBAL _in_stick_keyboard_fastcall
+340   0000              	GLOBAL _in_stick_keyboard
+341   0000              	GLOBAL _in_wait_nokey
+342   0000              	GLOBAL _in_wait_key
+343   0000              	GLOBAL _in_test_key
+344   0000              	GLOBAL _in_pause_fastcall
+345   0000              	GLOBAL _in_pause
+346   0000              	GLOBAL _in_key_scancode_fastcall
+347   0000              	GLOBAL _in_key_scancode
+348   0000              	GLOBAL _in_key_pressed_fastcall
+349   0000              	GLOBAL _in_key_pressed
+350   0000              	GLOBAL _in_inkey
+351   0000              	GLOBAL _ffsll_callee
+352   0000              	GLOBAL _ffsll
+353   0000              	GLOBAL _strxfrm_callee
+354   0000              	GLOBAL _strxfrm
+355   0000              	GLOBAL _strupr_fastcall
+356   0000              	GLOBAL _strupr
+357   0000              	GLOBAL _strtok_r_callee
+358   0000              	GLOBAL _strtok_r
+359   0000              	GLOBAL _strtok_callee
+360   0000              	GLOBAL _strtok
+361   0000              	GLOBAL _strstrip_fastcall
+362   0000              	GLOBAL _strstrip
+363   0000              	GLOBAL _strstr_callee
+364   0000              	GLOBAL _strstr
+365   0000              	GLOBAL _strspn_callee
+366   0000              	GLOBAL _strspn
+367   0000              	GLOBAL _strsep_callee
+368   0000              	GLOBAL _strsep
+369   0000              	GLOBAL _strrstrip_fastcall
+370   0000              	GLOBAL _strrstrip
+371   0000              	GLOBAL _strrstr_callee
+372   0000              	GLOBAL _strrstr
+373   0000              	GLOBAL _strrspn_callee
+374   0000              	GLOBAL _strrspn
+375   0000              	GLOBAL _strrev_fastcall
+376   0000              	GLOBAL _strrev
+377   0000              	GLOBAL _strrcspn_callee
+378   0000              	GLOBAL _strrcspn
+379   0000              	GLOBAL _strrchr_callee
+380   0000              	GLOBAL _strrchr
+381   0000              	GLOBAL _strpbrk_callee
+382   0000              	GLOBAL _strpbrk
+383   0000              	GLOBAL _strnlen_callee
+384   0000              	GLOBAL _strnlen
+385   0000              	GLOBAL _strnicmp_callee
+386   0000              	GLOBAL _strnicmp
+387   0000              	GLOBAL _strndup_callee
+388   0000              	GLOBAL _strndup
+389   0000              	GLOBAL _strncpy_callee
+390   0000              	GLOBAL _strncpy
+391   0000              	GLOBAL _strncmp_callee
+392   0000              	GLOBAL _strncmp
+393   0000              	GLOBAL _strnchr_callee
+394   0000              	GLOBAL _strnchr
+395   0000              	GLOBAL _strncat_callee
+396   0000              	GLOBAL _strncat
+397   0000              	GLOBAL _strncasecmp_callee
+398   0000              	GLOBAL _strncasecmp
+399   0000              	GLOBAL _strlwr_fastcall
+400   0000              	GLOBAL _strlwr
+401   0000              	GLOBAL _strlen_fastcall
+402   0000              	GLOBAL _strlen
+403   0000              	GLOBAL _strlcpy_callee
+404   0000              	GLOBAL _strlcpy
+405   0000              	GLOBAL _strlcat_callee
+406   0000              	GLOBAL _strlcat
+407   0000              	GLOBAL _stricmp_callee
+408   0000              	GLOBAL _stricmp
+409   0000              	GLOBAL _strerror_fastcall
+410   0000              	GLOBAL _strerror
+411   0000              	GLOBAL _strdup_fastcall
+412   0000              	GLOBAL _strdup
+413   0000              	GLOBAL _strcspn_callee
+414   0000              	GLOBAL _strcspn
+415   0000              	GLOBAL _strcpy_callee
+416   0000              	GLOBAL _strcpy
+417   0000              	GLOBAL _strcoll_callee
+418   0000              	GLOBAL _strcoll
+419   0000              	GLOBAL _strcmp_callee
+420   0000              	GLOBAL _strcmp
+421   0000              	GLOBAL _strchrnul_callee
+422   0000              	GLOBAL _strchrnul
+423   0000              	GLOBAL _strchr_callee
+424   0000              	GLOBAL _strchr
+425   0000              	GLOBAL _strcat_callee
+426   0000              	GLOBAL _strcat
+427   0000              	GLOBAL _strcasecmp_callee
+428   0000              	GLOBAL _strcasecmp
+429   0000              	GLOBAL _stpncpy_callee
+430   0000              	GLOBAL _stpncpy
+431   0000              	GLOBAL _stpcpy_callee
+432   0000              	GLOBAL _stpcpy
+433   0000              	GLOBAL _memswap_callee
+434   0000              	GLOBAL _memswap
+435   0000              	GLOBAL _memset_wr_callee
+436   0000              	GLOBAL _memset_wr
+437   0000              	GLOBAL _memset_callee
+438   0000              	GLOBAL _memset
+439   0000              	GLOBAL _memrchr_callee
+440   0000              	GLOBAL _memrchr
+441   0000              	GLOBAL _memmove_callee
+442   0000              	GLOBAL _memmove
+443   0000              	GLOBAL _memmem_callee
+444   0000              	GLOBAL _memmem
+445   0000              	GLOBAL _memcpy_callee
+446   0000              	GLOBAL _memcpy
+447   0000              	GLOBAL _memcmp_callee
+448   0000              	GLOBAL _memcmp
+449   0000              	GLOBAL _memchr_callee
+450   0000              	GLOBAL _memchr
+451   0000              	GLOBAL _memccpy_callee
+452   0000              	GLOBAL _memccpy
+453   0000              	GLOBAL _ffsl_fastcall
+454   0000              	GLOBAL _ffsl
+455   0000              	GLOBAL _ffs_fastcall
+456   0000              	GLOBAL _ffs
+457   0000              	GLOBAL __strrstrip__fastcall
+458   0000              	GLOBAL __strrstrip_
+459   0000              	GLOBAL __memupr__callee
+460   0000              	GLOBAL __memupr_
+461   0000              	GLOBAL __memstrcpy__callee
+462   0000              	GLOBAL __memstrcpy_
+463   0000              	GLOBAL __memlwr__callee
+464   0000              	GLOBAL __memlwr_
+465   0000              	GLOBAL _rawmemchr_callee
+466   0000              	GLOBAL _rawmemchr
+467   0000              	GLOBAL _strnset_callee
+468   0000              	GLOBAL _strnset
+469   0000              	GLOBAL _strset_callee
+470   0000              	GLOBAL _strset
+471   0000              	GLOBAL _rindex_callee
+472   0000              	GLOBAL _rindex
+473   0000              	GLOBAL _index_callee
+474   0000              	GLOBAL _index
+475   0000              	GLOBAL _bzero_callee
+476   0000              	GLOBAL _bzero
+477   0000              	GLOBAL _bcopy_callee
+478   0000              	GLOBAL _bcopy
+479   0000              	GLOBAL _bcmp_callee
+480   0000              	GLOBAL _bcmp
+481   0000              	GLOBAL _GLOBAL_ZX_PORT_7FFD
+482   0000              	GLOBAL _GLOBAL_ZX_PORT_1FFD
+483   0000              	GLOBAL _GLOBAL_ZX_PORT_FE
+484   0000              ;--------------------------------------------------------
+485   0000              ; special function registers
+486   0000              ;--------------------------------------------------------
+487   0000              defc _IO_FE	=	0x00fe
+488   0000              defc _IO_1FFD	=	0x1ffd
+489   0000              defc _IO_7FFD	=	0x7ffd
+490   0000              ;--------------------------------------------------------
+491   0000              ; ram data
+492   0000              ;--------------------------------------------------------
+493   0000              	SECTION bss_compiler
+494   0000              _charset:
+495   0000  00 00       	DEFS 2
+496   0002              _row:
+497   0002  00 00       	DEFS 2
+498   0004              _video:
+499   0004  00 00       	DEFS 2
+500   0006              _string:
+501   0006  00 00       	DEFS 2
+502   0008              _style:
+503   0008  00          	DEFS 1
+504   0009              _util_bin2str_result_65536_277:
+505   0009  00 00 00 00 00 00 00 00 00 
+                        	DEFS 9
+506   0012              ;--------------------------------------------------------
+507   0012              ; ram data
+508   0012              ;--------------------------------------------------------
+509   0012              
+510   0012              IF 0
+511   0012              
+512   0012              ; .area _INITIALIZED removed by z88dk
+513   0012              
+514   0012              
+515   0012              ENDIF
+516   0012              
+517   0012              ;--------------------------------------------------------
+518   0012              ; absolute external ram data
+519   0012              ;--------------------------------------------------------
+520   0012              	SECTION IGNORE
+521   0000              ;--------------------------------------------------------
+522   0000              ; global & static initialisations
+523   0000              ;--------------------------------------------------------
+524   0000              	SECTION code_crt_init
+525   0000              ;--------------------------------------------------------
+526   0000              ; Home
+527   0000              ;--------------------------------------------------------
+528   0000              	SECTION IGNORE
+529   0000              ;--------------------------------------------------------
+530   0000              ; code
+531   0000              ;--------------------------------------------------------
+532   0000              	SECTION code_compiler
+533   0000              ;text01.c:37: void setCharset(const uint16_t newAddress) __z88dk_fastcall {
+534   0000              ;	---------------------------------
+535   0000              ; Function setCharset
+536   0000              ; ---------------------------------
+537   0000              _setCharset:
+538   0000              ;text01.c:38: charset= (uint8_t *)newAddress;
+539   0000  22 00 00    	ld	(_charset), hl
+540   0003              ;text01.c:39: }
+541   0003  C9          	ret
+542   0004              	SECTION code_compiler
+543   0004              ;text01.c:41: void setStyle(const uint8_t newStyle) __z88dk_fastcall {
+544   0004              ;	---------------------------------
+545   0004              ; Function setStyle
+546   0004              ; ---------------------------------
+547   0004              _setStyle:
+548   0004  7D          	ld	a, l
+549   0005  32 08 00    	ld	(_style), a
+550   0008              ;text01.c:42: style= newStyle;
+551   0008              ;text01.c:43: }
+552   0008  C9          	ret
+553   0009              	SECTION code_compiler
+554   0009              ;text01.c:45: uint8_t *util_bin2str(const uint8_t byte) __z88dk_fastcall {
+555   0009              ;	---------------------------------
+556   0009              ; Function util_bin2str
+557   0009              ; ---------------------------------
+558   0009              _util_bin2str:
+559   0009  DD E5       	push	ix
+560   000B  DD 21 00 00 	ld	ix,0
+561   000F  DD 39       	add	ix,sp
+562   0011  F5          	push	af
+563   0012  3B          	dec	sp
+564   0013  DD 75 FF    	ld	(ix-1),l
+565   0016              ;text01.c:48: for(uint8_t i= 0; i<8; ++i) {
+566   0016  06 00       	ld	b,0x00
+567   0018              l_util_bin2str_00103:
+568   0018  78          	ld	a, b
+569   0019  D6 08       	sub	a,0x08
+570   001B  30 37       	jr	NC,l_util_bin2str_00101
+571   001D              ;text01.c:49: result[i]= ( byte&(1U << (7-i))? '1': '0' );
+572   001D  3E 09       	ld	a, +((_util_bin2str_result_65536_277) & 0xFF)
+573   001F  80          	add	a, b
+574   0020  5F          	ld	e, a
+575   0021  3E 00       	ld	a, +((_util_bin2str_result_65536_277) / 256)
+576   0023  CE 00       	adc	a,0x00
+577   0025  57          	ld	d, a
+578   0026  3E 07       	ld	a,0x07
+579   0028  90          	sub	a, b
+580   0029  4F          	ld	c, a
+581   002A  0C          	inc	c
+582   002B  21 01 00    	ld	hl,0x0001
+583   002E  18 01       	jr	l_util_bin2str_00126
+584   0030              l_util_bin2str_00125:
+585   0030  29          	add	hl, hl
+586   0031              l_util_bin2str_00126:
+587   0031  0D          	dec	c
+588   0032  20 FC       	jr	NZ,l_util_bin2str_00125
+589   0034  DD 7E FF    	ld	a,(ix-1)
+590   0037  0E 00       	ld	c,0x00
+591   0039  A5          	and	a, l
+592   003A  DD 77 FD    	ld	(ix-3),a
+593   003D  79          	ld	a, c
+594   003E  A4          	and	a, h
+595   003F  DD 77 FE    	ld	(ix-2),a
+596   0042  DD B6 FD    	or	a,(ix-3)
+597   0045  28 05       	jr	Z,l_util_bin2str_00107
+598   0047  21 31 00    	ld	hl,0x0031
+599   004A  18 03       	jr	l_util_bin2str_00108
+600   004C              l_util_bin2str_00107:
+601   004C  21 30 00    	ld	hl,0x0030
+602   004F              l_util_bin2str_00108:
+603   004F  7D          	ld	a, l
+604   0050  12          	ld	(de), a
+605   0051              ;text01.c:48: for(uint8_t i= 0; i<8; ++i) {
+606   0051  04          	inc	b
+607   0052  18 C4       	jr	l_util_bin2str_00103
+608   0054              l_util_bin2str_00101:
+609   0054              ;text01.c:51: result[8]= 0;
+610   0054  21 11 00    	ld	hl, +(_util_bin2str_result_65536_277 + 8)
+611   0057  36 00       	ld	(hl),0x00
+612   0059              ;text01.c:52: return (uint8_t *) &result;
+613   0059              ;text01.c:53: }
+614   0059  DD F9       	ld	sp,ix
+615   005B  21 09 00    	ld	hl,_util_bin2str_result_65536_277
+616   005E  DD E1       	pop	ix
+617   0060  C9          	ret
+618   0061              	SECTION code_compiler
+619   0061              ;text01.c:55: uint8_t *util_num2str(const uint16_t pnumber) __z88dk_fastcall __naked __z88dk_callee {
+620   0061              ;	---------------------------------
+621   0061              ; Function util_num2str
+622   0061              ; ---------------------------------
+623   0061              _util_num2str:
+624   0061              ;text01.c:110: __endasm;
+625   0061              ;
+626   0061              ;
+627   0061              	 int2String_16:
+628   0061  11 90 00    	ld	DE, num_string
+629   0064  01 F0 D8    	ld	BC, -10000
+630   0067  CD 85 00    	call	int2Dec_num1
+631   006A  01 18 FC    	ld	BC, -1000
+632   006D  CD 85 00    	call	int2Dec_num1
+633   0070  01 9C FF    	ld	BC, -100
+634   0073  CD 85 00    	call	int2Dec_num1
+635   0076  0E F6       	ld	C, -10
+636   0078  CD 85 00    	call	int2Dec_num1
+637   007B  48          	ld	C, B
+638   007C  CD 85 00    	call	int2Dec_num1
+639   007F  AF          	xor	A
+640   0080  12          	ld	(DE), A
+641   0081              ;
+642   0081  21 90 00    	ld	HL, num_string
+643   0084  C9          	ret
+644   0085              	 int2Dec_num1:
+645   0085  3E 2F       	ld	A,'0'-1
+646   0087              	 int2Dec_num2:
+647   0087  3C          	inc	A
+648   0088  09          	add	HL, BC
+649   0089  38 FC       	jr	C, int2Dec_num2
+650   008B  ED 42       	sbc	HL, BC
+651   008D  12          	ld	(DE), A
+652   008E  13          	inc	DE
+653   008F  C9          	ret
+654   0090              ;
+655   0090              	 num_string:
+656   0090  00 00 00 00 00 00 
+                        	defb	0, 0, 0, 0, 0, 0
+657   0096              ;text01.c:111: }
+658   0096              ;text01.c:113: static uint8_t _getReductionType(const uint8_t xar) __z88dk_fastcall {
+659   0096              ;	---------------------------------
+660   0096              ; Function _getReductionType
+661   0096              ; ---------------------------------
+662   0096              __getReductionType:
+663   0096  4D          	ld	c, l
+664   0097              ;text01.c:118: if( strchr(set1, xar) ) {
+665   0097  11 00 00    	ld	de,__getReductionType_set1_65536_283+0
+666   009A              l__getReductionType_00120:
+667   009A  1A          	ld	a, (de)
+668   009B  B9          	cp	a, c
+669   009C  28 06       	jr	Z,l__getReductionType_00119
+670   009E  B7          	or	a, a
+671   009F  13          	inc	de
+672   00A0  20 F8       	jr	NZ, l__getReductionType_00120
+673   00A2  5F          	ld	e, a
+674   00A3  57          	ld	d, a
+675   00A4              l__getReductionType_00119:
+676   00A4  7B          	ld	a, e
+677   00A5  B2          	or	a,d
+678   00A6  28 04       	jr	Z,l__getReductionType_00105
+679   00A8              ;text01.c:119: return 0;
+680   00A8  2E 00       	ld	l,0x00
+681   00AA  18 17       	jr	l__getReductionType_00107
+682   00AC              l__getReductionType_00105:
+683   00AC              ;text01.c:120: }else if( strchr(set2, xar) ) {
+684   00AC  21 15 00    	ld	hl,__getReductionType_set2_65536_283
+685   00AF              l__getReductionType_00122:
+686   00AF  7E          	ld	a, (hl)
+687   00B0  B9          	cp	a, c
+688   00B1  28 06       	jr	Z,l__getReductionType_00121
+689   00B3  B7          	or	a, a
+690   00B4  23          	inc	hl
+691   00B5  20 F8       	jr	NZ, l__getReductionType_00122
+692   00B7  6F          	ld	l, a
+693   00B8  67          	ld	h, a
+694   00B9              l__getReductionType_00121:
+695   00B9  7D          	ld	a, l
+696   00BA  B4          	or	a,h
+697   00BB  28 04       	jr	Z,l__getReductionType_00102
+698   00BD              ;text01.c:121: return 1;
+699   00BD  2E 01       	ld	l,0x01
+700   00BF  18 02       	jr	l__getReductionType_00107
+701   00C1              l__getReductionType_00102:
+702   00C1              ;text01.c:123: return 2;
+703   00C1  2E 02       	ld	l,0x02
+704   00C3              l__getReductionType_00107:
+705   00C3              ;text01.c:125: }
+706   00C3  C9          	ret
+707   00C4              	SECTION rodata_compiler
+708   0000              __getReductionType_set1_65536_283:
+709   0000  69 49 66 6B 6C 74 54 77 7A 5A 31 27 2C 2E 28 29 21 3A 2B 
+                        	DEFM "iIfkltTwzZ1',.()!:+"
+710   0013  5C          	DEFB 0x5c
+711   0014  00          	DEFB 0x00
+712   0015              __getReductionType_set2_65536_283:
+713   0015  34 37 6D 4B 4E 76 56 57 58 59 3F 
+                        	DEFM "47mKNvVWXY?"
+714   0020  00          	DEFB 0x00
+715   0021              	SECTION code_compiler
+716   00C4              ;text01.c:127: static void _recoverVideo() __naked {
+717   00C4              ;	---------------------------------
+718   00C4              ; Function _recoverVideo
+719   00C4              ; ---------------------------------
+720   00C4              __recoverVideo:
+721   00C4              ;text01.c:135: __endasm;
+722   00C4  2A 04 00    	ld	HL, (_video)
+723   00C7  7C          	ld	A, H
+724   00C8  D6 08       	sub	8
+725   00CA  67          	ld	H, A
+726   00CB  22 04 00    	ld	(_video), HL
+727   00CE  C9          	ret
+728   00CF              ;text01.c:136: }
+729   00CF              ;text01.c:138: static uint8_t *_getRow(const uint8_t xar) __z88dk_fastcall {
+730   00CF              ;	---------------------------------
+731   00CF              ; Function _getRow
+732   00CF              ; ---------------------------------
+733   00CF              __getRow:
+734   00CF              ;text01.c:150: __endasm;
+735   00CF              ;
+736   00CF  26 00       	ld	H, 0
+737   00D1  CB 25       	sla	L
+738   00D3  29          	add	HL, HL
+739   00D4  29          	add	HL, HL
+740   00D5  ED 4B 00 00 	ld	BC, (_charset)
+741   00D9  09          	add	HL, BC
+742   00DA  C9          	ret
+743   00DB              ;text01.c:151: }
+744   00DB  C9          	ret
+745   00DC              	SECTION code_compiler
+746   00DC              ;text01.c:153: void printString(uint8_t x, uint8_t y, uint8_t *str) __naked __z88dk_callee {
+747   00DC              ;	---------------------------------
+748   00DC              ; Function printString
+749   00DC              ; ---------------------------------
+750   00DC              _printString:
+751   00DC              ;text01.c:184: __endasm;
+752   00DC              ;	zzz: jr zzz
+753   00DC  E1          	pop	HL
+754   00DD  D1          	pop	DE
+755   00DE  E3          	ex	(SP), HL
+756   00DF  22 06 00    	ld	(_string), HL
+757   00E2              ;
+758   00E2  D5          	push	DE
+759   00E3  CD 00 00    	call	_zx_cxy2saddr_callee
+760   00E6  22 04 00    	ld	(_video), HL
+761   00E9              	 loopDrawStr:
+762   00E9  2A 06 00    	ld	HL, (_string)
+763   00EC  7E          	ld	A, (HL)
+764   00ED  B7          	or	A
+765   00EE  C8          	ret	Z
+766   00EF  23          	inc	HL
+767   00F0  22 06 00    	ld	(_string), HL
+768   00F3  6F          	ld	L, A
+769   00F4  CD CF 00    	call	__getRow
+770   00F7  22 02 00    	ld	(_row), HL
+771   00FA  CD 06 01    	call	__printChar
+772   00FD  CD C4 00    	call	__recoverVideo
+773   0100  21 04 00    	ld	HL, _video
+774   0103  34          	inc	(HL)
+775   0104  18 E3       	jr	loopDrawStr
+776   0106              ;text01.c:185: }
+777   0106              ;text01.c:187: static void _printChar() __naked {
+778   0106              ;	---------------------------------
+779   0106              ; Function _printChar
+780   0106              ; ---------------------------------
+781   0106              __printChar:
+782   0106              ;text01.c:229: __endasm;
+783   0106  ED 5B 02 00 	ld	DE, (_row)
+784   010A  2A 04 00    	ld	HL, (_video)
+785   010D  06 08       	ld	B, 8
+786   010F              	 loopDrawChar:
+787   010F  1A          	ld	A, (DE)
+788   0110  4F          	ld	C, A
+789   0111  3A 08 00    	ld	A, (_style)
+790   0114  CB 47       	bit	0, A
+791   0116  79          	ld	A, C
+792   0117  28 08       	jr	Z, writeChar
+793   0119  CB 27       	sla	A
+794   011B  B1          	or	C
+795   011C  CB 3F       	srl	A
+796   011E  CB 3F       	srl	A
+797   0120  B1          	or	C
+798   0121              	 writeChar:
+799   0121  77          	ld	(HL), A
+800   0122  24          	inc	H
+801   0123  13          	inc	DE
+802   0124  10 E9       	djnz	loopDrawChar
+803   0126  22 04 00    	ld	(_video), HL
+804   0129  3A 08 00    	ld	A, (_style)
+805   012C  CB 4F       	bit	1, A
+806   012E  C4 37 01    	call	NZ, __printCharHigh
+807   0131  CB 57       	bit	2, A
+808   0133  C4 57 01    	call	NZ, __printCharRotate
+809   0136  C9          	ret
+810   0137              ;text01.c:230: }
+811   0137              ;text01.c:232: static void _printCharHigh() __naked {
+812   0137              ;	---------------------------------
+813   0137              ; Function _printCharHigh
+814   0137              ; ---------------------------------
+815   0137              __printCharHigh:
+816   0137              ;text01.c:271: __endasm;
+817   0137  ED 5B 04 00 	ld	DE, (_video)
+818   013B  15          	dec	D
+819   013C  62 6B       	ld	HL, DE
+820   013E  01 20 00    	ld	BC, 32
+821   0141  09          	add	HL, BC
+822   0142  06 02       	ld	B, 2
+823   0144              	 loopScanHigh1:
+824   0144  C5          	push	BC
+825   0145  06 04       	ld	B, 4
+826   0147              	 loopScanHigh2:
+827   0147  1A          	ld	A, (DE)
+828   0148  77          	ld	(HL), A
+829   0149  25          	dec	H
+830   014A  77          	ld	(HL), A
+831   014B  25          	dec	H
+832   014C  15          	dec	D
+833   014D  10 F8       	djnz	loopScanHigh2
+834   014F  2A 04 00    	ld	HL, (_video)
+835   0152  25          	dec	H
+836   0153  C1          	pop	BC
+837   0154  10 EE       	djnz	loopScanHigh1
+838   0156  C9          	ret
+839   0157              ;text01.c:272: }
+840   0157              ;text01.c:274: static void _printCharRotate() __naked {
+841   0157              ;	---------------------------------
+842   0157              ; Function _printCharRotate
+843   0157              ; ---------------------------------
+844   0157              __printCharRotate:
+845   0157              ;text01.c:328: __endasm;
+846   0157              	 SCAN:
+847   0157  ED 5B 04 00 	ld	DE, (_video)
+848   015B  21 7D 01    	ld	HL, buffer_rotate
+849   015E  0E 08       	ld	C, 8
+850   0160              	 SCAN0:
+851   0160  1A          	ld	A,(DE)
+852   0161  15          	dec	D
+853   0162  E5          	push	HL
+854   0163  06 08       	ld	B,8
+855   0165              	 SCAN1:
+856   0165  1F          	rra
+857   0166  CB 1E       	rr	(HL)
+858   0168  23          	inc	HL
+859   0169  10 FA       	djnz	SCAN1
+860   016B  E1          	pop	HL
+861   016C  0D          	dec	C
+862   016D  20 F1       	jr	NZ, SCAN0
+863   016F              	 DUMP:
+864   016F              ;ld	DE, (_video)
+865   016F  21 7D 01    	ld	HL, buffer_rotate
+866   0172  06 08       	ld	B, 8
+867   0174              	 DUMPCHAR:
+868   0174  7E          	ld	A, (HL)
+869   0175  12          	ld	(DE), A
+870   0176  36 00       	ld	(HL), 0
+871   0178  14          	inc	D
+872   0179  23          	inc	HL
+873   017A  10 F8       	djnz	DUMPCHAR
+874   017C  C9          	ret
+875   017D              ;
+876   017D              	 buffer_rotate:
+877   017D  00 00 00 00 00 00 00 00 
+                        	defb	0, 0, 0, 0, 0, 0, 0, 0
+878   0185              ;text01.c:329: }
+879   0185              ;text01.c:331: void printStringMini(uint8_t x, uint8_t y, uint8_t *str) __naked __z88dk_callee {
+880   0185              ;	---------------------------------
+881   0185              ; Function printStringMini
+882   0185              ; ---------------------------------
+883   0185              _printStringMini:
+884   0185              ;text01.c:376: __endasm;
+885   0185              ;
+886   0185              ;zzz:	jr zzz
+887   0185  E1          	pop	HL
+888   0186  D1          	pop	DE
+889   0187  E3          	ex	(SP), HL
+890   0188  2B          	dec	HL
+891   0189  22 06 00    	ld	(_string), HL
+892   018C              ;
+893   018C  D5          	push	DE
+894   018D  CD 00 00    	call	_zx_cxy2saddr_callee
+895   0190  22 04 00    	ld	(_video), HL
+896   0193  3E 00       	ld	A, 0
+897   0195  32 35 02    	ld	(char_isRight), A
+898   0198              	 loopDrawStrM:
+899   0198  2A 06 00    	ld	HL, (_string)
+900   019B  23          	inc	HL
+901   019C  7E          	ld	A, (HL)
+902   019D  B7          	or	A
+903   019E  C8          	ret	Z
+904   019F  22 06 00    	ld	(_string), HL
+905   01A2  6F          	ld	L, A
+906   01A3  CD CF 00    	call	__getRow
+907   01A6  22 02 00    	ld	(_row), HL
+908   01A9  CD C2 01    	call	__printCharMini
+909   01AC  CD C4 00    	call	__recoverVideo
+910   01AF  3A 35 02    	ld	A, (char_isRight)
+911   01B2  3C          	inc	A
+912   01B3  FE 02       	cp	2
+913   01B5  20 06       	jr	NZ, endLoop
+914   01B7              ;
+915   01B7  3E 00       	ld	A, 0
+916   01B9  23          	inc	HL
+917   01BA  22 04 00    	ld	(_video), HL
+918   01BD              	 endLoop:
+919   01BD  32 35 02    	ld	(char_isRight), A
+920   01C0  18 D6       	jr	loopDrawStrM
+921   01C2              ;text01.c:377: }
+922   01C2              ;text01.c:379: static void _printCharMini() __naked __z88dk_callee {
+923   01C2              ;	---------------------------------
+924   01C2              ; Function _printCharMini
+925   01C2              ; ---------------------------------
+926   01C2              __printCharMini:
+927   01C2              ;text01.c:471: __endasm;
+928   01C2  2A 06 00    	ld	HL, (_string)
+929   01C5  6E          	ld	L, (HL)
+930   01C6  CD 96 00    	call	__getReductionType
+931   01C9  4D          	ld	C, L
+932   01CA  ED 5B 02 00 	ld	DE, (_row)
+933   01CE  2A 04 00    	ld	HL, (_video)
+934   01D1  24          	inc	H
+935   01D2  13          	inc	DE
+936   01D3  06 06       	ld	B, 6
+937   01D5              	  loopScanMini:
+938   01D5  79          	ld	A, C
+939   01D6  C5          	push	BC
+940   01D7  B7          	or	A
+941   01D8  28 25       	jr	Z, reductionType0
+942   01DA  3D          	dec	A
+943   01DB  28 2B       	jr	Z, reductionType1
+944   01DD  3D          	dec	A
+945   01DE  28 48       	jr	Z, reductionType2
+946   01E0              	 endReduction:
+947   01E0  E6 F0       	and	0b11110000
+948   01E2  47          	ld	B, A
+949   01E3  3A 35 02    	ld	A, (char_isRight)
+950   01E6  B7          	or	A
+951   01E7  28 0B       	jr	Z, writeReduction
+952   01E9  78          	ld	A, B
+953   01EA  CB 3F       	srl	A
+954   01EC  CB 3F       	srl	A
+955   01EE  CB 3F       	srl	A
+956   01F0  CB 3F       	srl	A
+957   01F2  B6          	or	(HL)
+958   01F3  47          	ld	B, A
+959   01F4              	 writeReduction:
+960   01F4  70          	ld	(HL), B
+961   01F5  C1          	pop	BC
+962   01F6  24          	inc	H
+963   01F7  13          	inc	DE
+964   01F8  10 DB       	djnz	loopScanMini
+965   01FA  24          	inc	H
+966   01FB  22 04 00    	ld	(_video), HL
+967   01FE  C9          	ret
+968   01FF              	 reductionType0:
+969   01FF  1A          	ld	A, (DE)
+970   0200  E6 3C       	and	0b00111100
+971   0202  CB 27       	sla	A
+972   0204  CB 27       	sla	A
+973   0206  18 D8       	jr	endReduction
+974   0208              	 reductionType1:
+975   0208  1A          	ld	A, (DE)
+976   0209  E6 FE       	and	0b11111110
+977   020B  47          	ld	B, A
+978   020C  48          	ld	C, B
+979   020D  E6 80       	and	0b10000000
+980   020F  CB 3F       	srl	A
+981   0211  CB 3F       	srl	A
+982   0213  B0          	or	B
+983   0214  47          	ld	B, A
+984   0215  79          	ld	A, C
+985   0216  E6 40       	and	0b01000000
+986   0218  CB 3F       	srl	A
+987   021A  B0          	or	B
+988   021B  47          	ld	B, A
+989   021C  79          	ld	A, C
+990   021D  E6 02       	and	0b00000010
+991   021F  CB 27       	sla	A
+992   0221  B0          	or	B
+993   0222  CB 27       	sla	A
+994   0224  CB 27       	sla	A
+995   0226  18 B8       	jr	endReduction
+996   0228              	 reductionType2:
+997   0228  1A          	ld	A, (DE)
+998   0229  E6 66       	and	0b01100110
+999   022B  47          	ld	B, A
+1000  022C  CB 27       	sla	A
+1001  022E  CB 27       	sla	A
+1002  0230  B0          	or	B
+1003  0231  CB 27       	sla	A
+1004  0233  18 AB       	jr	endReduction
+1005  0235              	 char_isRight:
+1006  0235  00          	defb	0
+1007  0236              ;text01.c:472: }
+1008  0236              ;text01.c:662: main() {
+1009  0236              ;	---------------------------------
+1010  0236              ; Function main
+1011  0236              ; ---------------------------------
+1012  0236              _main:
+1013  0236              ;text01.c:663: setCharset(ADR_CHARSETROM);
+1014  0236  21 00 3C    	ld	hl,0x3c00
+1015  0239  CD 00 00    	call	_setCharset
+1016  023C              ;text01.c:665: zx_border(INK_YELLOW);
+1017  023C  2E 06       	ld	l,0x06
+1018  023E  CD 00 00    	call	_zx_border_fastcall
+1019  0241              ;text01.c:666: zx_cls(INK_BLACK|PAPER_WHITE);
+1020  0241  2E 38       	ld	l,0x38
+1021  0243  CD 00 00    	call	_zx_cls_fastcall
+1022  0246              ;text01.c:668: setStyle(TEXT_HIGH); printString(3, 0, util_bin2str(0b10101010)); //"AAAAAAAAAAAAAA");
+1023  0246  2E 02       	ld	l,0x02
+1024  0248  CD 04 00    	call	_setStyle
+1025  024B  2E AA       	ld	l,0xaa
+1026  024D  CD 09 00    	call	_util_bin2str
+1027  0250  E5          	push	hl
+1028  0251  AF          	xor	a, a
+1029  0252  57          	ld	d,a
+1030  0253  1E 03       	ld	e,0x03
+1031  0255  D5          	push	de
+1032  0256  CD DC 00    	call	_printString
+1033  0259              ;text01.c:669: setStyle(TEXT_BOLD); printString(5, 1, "Texto generado por Z80");
+1034  0259  2E 01       	ld	l,0x01
+1035  025B  CD 04 00    	call	_setStyle
+1036  025E  21 21 00    	ld	hl,___str_2
+1037  0261  E5          	push	hl
+1038  0262  11 05 01    	ld	de,0x0105
+1039  0265  D5          	push	de
+1040  0266  CD DC 00    	call	_printString
+1041  0269              ;text01.c:671: setStyle(TEXT_BOLD|TEXT_SPIN);
+1042  0269  2E 05       	ld	l,0x05
+1043  026B  CD 04 00    	call	_setStyle
+1044  026E              ;text01.c:672: printString(1, 7, "V");
+1045  026E  21 38 00    	ld	hl,___str_3
+1046  0271  E5          	push	hl
+1047  0272  11 01 07    	ld	de,0x0701
+1048  0275  D5          	push	de
+1049  0276  CD DC 00    	call	_printString
+1050  0279              ;text01.c:674: printString(1, 6, "e");
+1051  0279  21 3A 00    	ld	hl,___str_4
+1052  027C  E5          	push	hl
+1053  027D  11 01 06    	ld	de,0x0601
+1054  0280  D5          	push	de
+1055  0281  CD DC 00    	call	_printString
+1056  0284              ;text01.c:675: printString(1, 5, "r");
+1057  0284  21 3C 00    	ld	hl,___str_5
+1058  0287  E5          	push	hl
+1059  0288  11 01 05    	ld	de,0x0501
+1060  028B  D5          	push	de
+1061  028C  CD DC 00    	call	_printString
+1062  028F              ;text01.c:676: printString(1, 4, "t");
+1063  028F  21 3E 00    	ld	hl,___str_6
+1064  0292  E5          	push	hl
+1065  0293  11 01 04    	ld	de,0x0401
+1066  0296  D5          	push	de
+1067  0297  CD DC 00    	call	_printString
+1068  029A              ;text01.c:677: printString(1, 3, "i");
+1069  029A  21 40 00    	ld	hl,___str_7
+1070  029D  E5          	push	hl
+1071  029E  11 01 03    	ld	de,0x0301
+1072  02A1  D5          	push	de
+1073  02A2  CD DC 00    	call	_printString
+1074  02A5              ;text01.c:678: printString(1, 2, "c");
+1075  02A5  21 42 00    	ld	hl,___str_8
+1076  02A8  E5          	push	hl
+1077  02A9  11 01 02    	ld	de,0x0201
+1078  02AC  D5          	push	de
+1079  02AD  CD DC 00    	call	_printString
+1080  02B0              ;text01.c:679: printString(1, 1, "a");
+1081  02B0  21 44 00    	ld	hl,___str_9
+1082  02B3  E5          	push	hl
+1083  02B4  11 01 01    	ld	de,0x0101
+1084  02B7  D5          	push	de
+1085  02B8  CD DC 00    	call	_printString
+1086  02BB              ;text01.c:680: printString(1, 0, "l");
+1087  02BB  21 46 00    	ld	hl,___str_10
+1088  02BE  E5          	push	hl
+1089  02BF  AF          	xor	a, a
+1090  02C0  57          	ld	d,a
+1091  02C1  1E 01       	ld	e,0x01
+1092  02C3  D5          	push	de
+1093  02C4  CD DC 00    	call	_printString
+1094  02C7              ;text01.c:682: setStyle(TEXT_BOLD|TEXT_HIGH);
+1095  02C7  2E 03       	ld	l,0x03
+1096  02C9  CD 04 00    	call	_setStyle
+1097  02CC              ;text01.c:683: printString(5, 2, "ADR:");
+1098  02CC  21 48 00    	ld	hl,___str_11
+1099  02CF  E5          	push	hl
+1100  02D0  11 05 02    	ld	de,0x0205
+1101  02D3  D5          	push	de
+1102  02D4  CD DC 00    	call	_printString
+1103  02D7              ;text01.c:684: printString(9, 2, util_num2str(69));
+1104  02D7  21 45 00    	ld	hl,0x0045
+1105  02DA  CD 61 00    	call	_util_num2str
+1106  02DD  E5          	push	hl
+1107  02DE  11 09 02    	ld	de,0x0209
+1108  02E1  D5          	push	de
+1109  02E2  CD DC 00    	call	_printString
+1110  02E5              ;text01.c:685: printString(15, 2, "High");
+1111  02E5  21 4D 00    	ld	hl,___str_12
+1112  02E8  E5          	push	hl
+1113  02E9  11 0F 02    	ld	de,0x020f
+1114  02EC  D5          	push	de
+1115  02ED  CD DC 00    	call	_printString
+1116  02F0              ;text01.c:687: printStringMini(5, 5, "Probando MAYUSCULA");
+1117  02F0  21 52 00    	ld	hl,___str_13
+1118  02F3  E5          	push	hl
+1119  02F4  11 05 05    	ld	de,0x0505
+1120  02F7  D5          	push	de
+1121  02F8  CD 85 01    	call	_printStringMini
+1122  02FB              ;text01.c:689: printStringMini(3, 7, "0 1 2 3 4 5 6 7 8 9 ( ) , . ' ? ! + : \\ ");
+1123  02FB  21 65 00    	ld	hl,___str_14
+1124  02FE  E5          	push	hl
+1125  02FF  11 03 07    	ld	de,0x0703
+1126  0302  D5          	push	de
+1127  0303  CD 85 01    	call	_printStringMini
+1128  0306              ;text01.c:690: printStringMini(3, 8, "a b c d e f g h i j k l m n o p q r s t u v w x y z");
+1129  0306  21 8E 00    	ld	hl,___str_15
+1130  0309  E5          	push	hl
+1131  030A  11 03 08    	ld	de,0x0803
+1132  030D  D5          	push	de
+1133  030E  CD 85 01    	call	_printStringMini
+1134  0311              ;text01.c:691: printStringMini(3, 9, "A B C D E F G H I J K L M N O P P Q R S T U V W X Y Z");
+1135  0311  21 C2 00    	ld	hl,___str_16
+1136  0314  E5          	push	hl
+1137  0315  11 03 09    	ld	de,0x0903
+1138  0318  D5          	push	de
+1139  0319  CD 85 01    	call	_printStringMini
+1140  031C              ;text01.c:693: printStringMini(0, 11, "This is an experimental program to generate characters in sixty");
+1141  031C  21 F8 00    	ld	hl,___str_17
+1142  031F  E5          	push	hl
+1143  0320  3E 0B       	ld	a,0x0b
+1144  0322  F5          	push	af
+1145  0323  33          	inc	sp
+1146  0324  AF          	xor	a, a
+1147  0325  F5          	push	af
+1148  0326  33          	inc	sp
+1149  0327  CD 85 01    	call	_printStringMini
+1150  032A              ;text01.c:694: printStringMini(0, 12, "four columns, I mean 2 chars into one 8x8 cell.");
+1151  032A  21 38 01    	ld	hl,___str_18
+1152  032D  E5          	push	hl
+1153  032E  3E 0C       	ld	a,0x0c
+1154  0330  F5          	push	af
+1155  0331  33          	inc	sp
+1156  0332  AF          	xor	a, a
+1157  0333  F5          	push	af
+1158  0334  33          	inc	sp
+1159  0335  CD 85 01    	call	_printStringMini
+1160  0338              ;text01.c:695: printStringMini(0, 14, "The most relevant is that I don't redefine a new charset.");
+1161  0338  21 68 01    	ld	hl,___str_19
+1162  033B  E5          	push	hl
+1163  033C  3E 0E       	ld	a,0x0e
+1164  033E  F5          	push	af
+1165  033F  33          	inc	sp
+1166  0340  AF          	xor	a, a
+1167  0341  F5          	push	af
+1168  0342  33          	inc	sp
+1169  0343  CD 85 01    	call	_printStringMini
+1170  0346              ;text01.c:696: printStringMini(0, 15, "It's a runtime generation using filters over the default CS.");
+1171  0346  21 A2 01    	ld	hl,___str_20
+1172  0349  E5          	push	hl
+1173  034A  3E 0F       	ld	a,0x0f
+1174  034C  F5          	push	af
+1175  034D  33          	inc	sp
+1176  034E  AF          	xor	a, a
+1177  034F  F5          	push	af
+1178  0350  33          	inc	sp
+1179  0351  CD 85 01    	call	_printStringMini
+1180  0354              ;text01.c:697: printStringMini(0, 17, "Also I've done routines to print in Bold, High and Vertical.");
+1181  0354  21 DF 01    	ld	hl,___str_21
+1182  0357  E5          	push	hl
+1183  0358  3E 11       	ld	a,0x11
+1184  035A  F5          	push	af
+1185  035B  33          	inc	sp
+1186  035C  AF          	xor	a, a
+1187  035D  F5          	push	af
+1188  035E  33          	inc	sp
+1189  035F  CD 85 01    	call	_printStringMini
+1190  0362              ;text01.c:698: printStringMini(0, 18, "And to execute conversions from number to ascii characters.");
+1191  0362  21 1C 02    	ld	hl,___str_22
+1192  0365  E5          	push	hl
+1193  0366  3E 12       	ld	a,0x12
+1194  0368  F5          	push	af
+1195  0369  33          	inc	sp
+1196  036A  AF          	xor	a, a
+1197  036B  F5          	push	af
+1198  036C  33          	inc	sp
+1199  036D  CD 85 01    	call	_printStringMini
+1200  0370              ;text01.c:701: printStringMini(1, 20, "video= zx-cxy2saddr( 1, 20 )=");
+1201  0370  21 58 02    	ld	hl,___str_23
+1202  0373  E5          	push	hl
+1203  0374  11 01 14    	ld	de,0x1401
+1204  0377  D5          	push	de
+1205  0378  CD 85 01    	call	_printStringMini
+1206  037B              ;text01.c:702: printStringMini(16, 20, util_num2str( (uint16_t)zx_cxy2saddr(1, 20)) );
+1207  037B  11 01 14    	ld	de,0x1401
+1208  037E  D5          	push	de
+1209  037F  CD 00 00    	call	_zx_cxy2saddr_callee
+1210  0382  CD 61 00    	call	_util_num2str
+1211  0385  E5          	push	hl
+1212  0386  11 10 14    	ld	de,0x1410
+1213  0389  D5          	push	de
+1214  038A  CD 85 01    	call	_printStringMini
+1215  038D              ;text01.c:704: printStringMini(1, 21, "video= zx-cxy2saddr( 1, 21 )=");
+1216  038D  21 76 02    	ld	hl,___str_24
+1217  0390  E5          	push	hl
+1218  0391  11 01 15    	ld	de,0x1501
+1219  0394  D5          	push	de
+1220  0395  CD 85 01    	call	_printStringMini
+1221  0398              ;text01.c:705: printStringMini(16, 21, util_num2str( (uint16_t)zx_cxy2saddr(1, 21)) );
+1222  0398  11 01 15    	ld	de,0x1501
+1223  039B  D5          	push	de
+1224  039C  CD 00 00    	call	_zx_cxy2saddr_callee
+1225  039F  CD 61 00    	call	_util_num2str
+1226  03A2  E5          	push	hl
+1227  03A3  3E 15       	ld	a,0x15
+1228  03A5  57          	ld	d,a
+1229  03A6  1E 10       	ld	e,0x10
+1230  03A8  D5          	push	de
+1231  03A9  CD 85 01    	call	_printStringMini
+1232  03AC              ;text01.c:707: in_wait_key();
+1233  03AC              ;text01.c:708: return;
+1234  03AC              ;text01.c:709: }
+1235  03AC  C3 00 00    	jp	_in_wait_key
+1236  03AF              	SECTION rodata_compiler
+1237  0021              ___str_2:
+1238  0021  54 65 78 74 6F 20 67 65 6E 65 72 61 64 6F 20 70 6F 72 20 5A 38 30 
+                        	DEFM "Texto generado por Z80"
+1239  0037  00          	DEFB 0x00
+1240  0038              	SECTION rodata_compiler
+1241  0038              ___str_3:
+1242  0038  56          	DEFM "V"
+1243  0039  00          	DEFB 0x00
+1244  003A              	SECTION rodata_compiler
+1245  003A              ___str_4:
+1246  003A  65          	DEFM "e"
+1247  003B  00          	DEFB 0x00
+1248  003C              	SECTION rodata_compiler
+1249  003C              ___str_5:
+1250  003C  72          	DEFM "r"
+1251  003D  00          	DEFB 0x00
+1252  003E              	SECTION rodata_compiler
+1253  003E              ___str_6:
+1254  003E  74          	DEFM "t"
+1255  003F  00          	DEFB 0x00
+1256  0040              	SECTION rodata_compiler
+1257  0040              ___str_7:
+1258  0040  69          	DEFM "i"
+1259  0041  00          	DEFB 0x00
+1260  0042              	SECTION rodata_compiler
+1261  0042              ___str_8:
+1262  0042  63          	DEFM "c"
+1263  0043  00          	DEFB 0x00
+1264  0044              	SECTION rodata_compiler
+1265  0044              ___str_9:
+1266  0044  61          	DEFM "a"
+1267  0045  00          	DEFB 0x00
+1268  0046              	SECTION rodata_compiler
+1269  0046              ___str_10:
+1270  0046  6C          	DEFM "l"
+1271  0047  00          	DEFB 0x00
+1272  0048              	SECTION rodata_compiler
+1273  0048              ___str_11:
+1274  0048  41 44 52 3A 	DEFM "ADR:"
+1275  004C  00          	DEFB 0x00
+1276  004D              	SECTION rodata_compiler
+1277  004D              ___str_12:
+1278  004D  48 69 67 68 	DEFM "High"
+1279  0051  00          	DEFB 0x00
+1280  0052              	SECTION rodata_compiler
+1281  0052              ___str_13:
+1282  0052  50 72 6F 62 61 6E 64 6F 20 4D 41 59 55 53 43 55 4C 41 
+                        	DEFM "Probando MAYUSCULA"
+1283  0064  00          	DEFB 0x00
+1284  0065              	SECTION rodata_compiler
+1285  0065              ___str_14:
+1286  0065  30 20 31 20 32 20 33 20 34 20 35 20 36 20 37 20 38 20 39 20 28 20 29 20 2C 20 2E 20 27 20 3F 20 
+      0085  21 20 2B 20 3A 20 
+                        	DEFM "0 1 2 3 4 5 6 7 8 9 ( ) , . ' ? ! + : "
+1287  008B  5C          	DEFB 0x5c
+1288  008C  20          	DEFM " "
+1289  008D  00          	DEFB 0x00
+1290  008E              	SECTION rodata_compiler
+1291  008E              ___str_15:
+1292  008E  61 20 62 20 63 20 64 20 65 20 66 20 67 20 68 20 69 20 6A 20 6B 20 6C 20 6D 20 6E 20 6F 20 70 20 
+      00AE  71 20 72 20 73 20 74 20 75 20 76 20 77 20 78 20 79 20 7A 
+                        	DEFM "a b c d e f g h i j k l m n o p q r s t u v w x y z"
+1293  00C1  00          	DEFB 0x00
+1294  00C2              	SECTION rodata_compiler
+1295  00C2              ___str_16:
+1296  00C2  41 20 42 20 43 20 44 20 45 20 46 20 47 20 48 20 49 20 4A 20 4B 20 4C 20 4D 20 4E 20 4F 20 50 20 
+      00E2  50 20 51 20 52 20 53 20 54 20 55 20 56 20 57 20 58 20 59 20 5A 
+                        	DEFM "A B C D E F G H I J K L M N O P P Q R S T U V W X Y Z"
+1297  00F7  00          	DEFB 0x00
+1298  00F8              	SECTION rodata_compiler
+1299  00F8              ___str_17:
+1300  00F8  54 68 69 73 20 69 73 20 61 6E 20 65 78 70 65 72 69 6D 65 6E 74 61 6C 20 70 72 6F 67 72 61 6D 20 
+      0118  74 6F 20 67 65 6E 65 72 61 74 65 20 63 68 61 72 61 63 74 65 72 73 20 69 6E 20 73 69 
+                        	DEFM "This is an experimental program to generate characters in si"
+1301  0134  78 74 79    	DEFM "xty"
+1302  0137  00          	DEFB 0x00
+1303  0138              	SECTION rodata_compiler
+1304  0138              ___str_18:
+1305  0138  66 6F 75 72 20 63 6F 6C 75 6D 6E 73 2C 20 49 20 6D 65 61 6E 20 32 20 63 68 61 72 73 20 69 6E 74 
+      0158  6F 20 6F 6E 65 20 38 78 38 20 63 65 6C 6C 2E 
+                        	DEFM "four columns, I mean 2 chars into one 8x8 cell."
+1306  0167  00          	DEFB 0x00
+1307  0168              	SECTION rodata_compiler
+1308  0168              ___str_19:
+1309  0168  54 68 65 20 6D 6F 73 74 20 72 65 6C 65 76 61 6E 74 20 69 73 20 74 68 61 74 20 49 20 64 6F 6E 27 
+      0188  74 20 72 65 64 65 66 69 6E 65 20 61 20 6E 65 77 20 63 68 61 72 73 65 74 2E 
+                        	DEFM "The most relevant is that I don't redefine a new charset."
+1310  01A1  00          	DEFB 0x00
+1311  01A2              	SECTION rodata_compiler
+1312  01A2              ___str_20:
+1313  01A2  49 74 27 73 20 61 20 72 75 6E 74 69 6D 65 20 67 65 6E 65 72 61 74 69 6F 6E 20 75 73 69 6E 67 20 
+      01C2  66 69 6C 74 65 72 73 20 6F 76 65 72 20 74 68 65 20 64 65 66 61 75 6C 74 20 43 53 2E 
+                        	DEFM "It's a runtime generation using filters over the default CS."
+1314  01DE  00          	DEFB 0x00
+1315  01DF              	SECTION rodata_compiler
+1316  01DF              ___str_21:
+1317  01DF  41 6C 73 6F 20 49 27 76 65 20 64 6F 6E 65 20 72 6F 75 74 69 6E 65 73 20 74 6F 20 70 72 69 6E 74 
+      01FF  20 69 6E 20 42 6F 6C 64 2C 20 48 69 67 68 20 61 6E 64 20 56 65 72 74 69 63 61 6C 2E 
+                        	DEFM "Also I've done routines to print in Bold, High and Vertical."
+1318  021B  00          	DEFB 0x00
+1319  021C              	SECTION rodata_compiler
+1320  021C              ___str_22:
+1321  021C  41 6E 64 20 74 6F 20 65 78 65 63 75 74 65 20 63 6F 6E 76 65 72 73 69 6F 6E 73 20 66 72 6F 6D 20 
+      023C  6E 75 6D 62 65 72 20 74 6F 20 61 73 63 69 69 20 63 68 61 72 61 63 74 65 72 73 2E 
+                        	DEFM "And to execute conversions from number to ascii characters."
+1322  0257  00          	DEFB 0x00
+1323  0258              	SECTION rodata_compiler
+1324  0258              ___str_23:
+1325  0258  76 69 64 65 6F 3D 20 7A 78 2D 63 78 79 32 73 61 64 64 72 28 20 31 2C 20 32 30 20 29 3D 
+                        	DEFM "video= zx-cxy2saddr( 1, 20 )="
+1326  0275  00          	DEFB 0x00
+1327  0276              	SECTION rodata_compiler
+1328  0276              ___str_24:
+1329  0276  76 69 64 65 6F 3D 20 7A 78 2D 63 78 79 32 73 61 64 64 72 28 20 31 2C 20 32 31 20 29 3D 
+                        	DEFM "video= zx-cxy2saddr( 1, 21 )="
+1330  0293  00          	DEFB 0x00
+1331  0294              	SECTION IGNORE
+1332  0000              
