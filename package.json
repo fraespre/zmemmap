@@ -2,7 +2,7 @@
   "name": "zmemmap",
   "version": "0.0.1",
   "description": "Z88DK tool to parse and interpret the memory map files (.map)",
-  "author": "Javier.Escriva",
+  "author": "fraespre",
   "license": "MIT",
   "main": "./main.js",
   "bin": "./zmemmap.js",
