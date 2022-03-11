@@ -156,6 +156,7 @@
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Section</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Component</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">Item</Data> </Cell> 
+          <Cell ss:StyleID="s23"> <Data ss:Type="String">Scope</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SizeItem</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SumCom</Data> </Cell> 
           <Cell ss:StyleID="s23"> <Data ss:Type="String">SumSect</Data> </Cell> 
@@ -168,221 +169,93 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__malloc_block</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5095</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">5000</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">5095</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">5000</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">5095</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">5000</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
           <Cell> <Data ss:Type="String">code_compiler</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">memoryUtil_c</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_memoryUtil_free</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">182</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_memoryUtil_malloc</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">157</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_reverse4col</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">68</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_reverse3col</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">48</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_memoryUtil_relocAdr_00139</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">47</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_memoryUtil_relocAdr</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">43</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_reverse2col</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">30</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_loopFrames</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">27</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_memoryUtil_memcpy</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">26</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_memoryUtil_relocAdr_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">23</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_memoryUtil_decompress</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">23</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_memoryUtil_relocAdr_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">21</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_memoryUtil_memFlip</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">19</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_memoryUtil_relocAdr_00106</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">19</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_endSwitch</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">18</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_loopLenght</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">17</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_switch</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">14</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_memoryUtil_relocAdr_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">14</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_reverse1col</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">12</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_memoryUtil_relocAdr_00110</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">6</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_memoryUtil_memcpy_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_adr0</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_adr1</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_adr2</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_adr3</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_pFrames</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_pColumnsize</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">flip_pBlanksize</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">828</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">guiUtil_c</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_guiUtil_border</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3565</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_guiUtil_update</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">327</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_guiUtil_printChr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">59</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_guiUtil_loadTiles_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">29</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_guiUtil_loadTiles</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">53</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_guiUtil_clear</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">23</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_guiUtil_loadTiles</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">21</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_guiUtil_init</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_guiUtil_invalidate</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">8</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_guiUtil_loadTiles_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">4048</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">156</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">clockUtil_c</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_clockUtil_enable</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">30</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_isr</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">12</Data> </Cell> 
+          <Cell> <Data ss:Type="String">__im2_isr_isr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">20</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__im2_isr_isr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_isr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">12</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_clockUtil_disable</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">10</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_clockUtil_checkTimer</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">10</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_clockUtil_wait</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">8</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__im2_isr_isr_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">7</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">finish</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">border</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__im2_isr_isr_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">99</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -390,85 +263,35 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_debugUtil_debug</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">59</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_debugUtil_showMemChar_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">39</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_heap_handle</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">32</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_debugUtil_heapFree</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">29</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__bin2str_00126</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">27</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__bin2str_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">24</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__heapFree</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">91</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__bin2str</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__bin2str_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_debugUtil_debug_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">12</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_debugUtil_debug_00106</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">12</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_debugUtil_debug_00105</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_debugUtil_showMemChar_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_debugUtil_showMemChar_00108</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">6</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_debugUtil_showMemChar_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">6</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__bin2str_00108</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_heap_handle_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__bin2str_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">88</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_debugUtil_showMemChar</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">62</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__bin2str_00125</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_heap_handle</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">35</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_debugUtil_heapFree</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">29</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">__heapFree</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">320</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -476,135 +299,232 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_textUtil_printStrc</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">52</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_textUtil_setColor</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">45</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_textUtil_num2str</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">36</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopDrawStr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">29</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_textUtil_setColor</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">22</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_textUtil_setColor_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">20</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopDrawChar</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">18</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">writeChar</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">17</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopScanHigh2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">16</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__printCharHigh</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_textUtil_printStr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__getRow</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__recoverVideo</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_textUtil_init</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__printCharNormal</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">int2Dec_num2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">num_string</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_textUtil_setStyle</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_textUtil_setCharset</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">loopScanHigh1</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_textUtil_setColor_00104</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">3</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">int2Dec_num1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">310</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">memoryUtil_c</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_memoryUtil_relocAdr</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">173</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_reverse4col</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">68</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_reverse3col</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">48</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_reverse2col</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">30</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_memoryUtil_memcpy</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">29</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_loopFrames</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">27</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_memoryUtil_decompress</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">23</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_memoryUtil_memFlip</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">19</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_endSwitch</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">18</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_loopLenght</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">17</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_switch</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">14</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_reverse1col</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">12</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_adr0</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_adr1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_adr2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_adr3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_pFrames</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_pColumnsize</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">flip_pBlanksize</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">489</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">gameMan_c</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">__events</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">133</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__begin</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">36</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_gameMan_run</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">35</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__events_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">31</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__events_00105</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">31</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__events_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">26</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_gameMan_init</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">17</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__events_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">17</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__events</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__events_00108</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__end</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">8</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">229</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -612,13 +532,15 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_inputMan_init</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">51</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_inputMan_getInput</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">55</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -626,437 +548,183 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_sprRobinRes_diagnostic</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">135</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">311</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">__canvasCreate</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">116</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_sprRobinRes_createSP1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">82</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_sprRobinRes_createResource</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">58</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00110</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">44</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_level01Res_createTiles</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">39</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00105</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">36</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">34</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">31</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_levelMan_createCanvas</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">31</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__canvasCreate</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">29</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_sprRobinRes_memFlip</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">27</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00113</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">24</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_sprRobinRes_destroyResource</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">19</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00114</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">18</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_levelMan_load_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">18</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_levelMan_unload_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">18</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00112</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">16</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_levelMan_diagnostic</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">16</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_levelMan_load_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">16</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_levelMan_unload_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">16</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">10</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_levelMan_load</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">9</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">46</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_levelMan_unload</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">9</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">46</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">7</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_level01Res_createTiles</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">39</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_levelMan_createCanvas</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">31</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_sprRobinRes_memFlip</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">27</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_sprRobinRes_destroyResource</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">19</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_levelMan_diagnostic</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">16</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_level01Res_removeTiles</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_sprRobinRes_diagnostic_00155</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_levelMan_getCanvas</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00111</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00113</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00108</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__canvasCreate_00109</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_levelMan_load_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_levelMan_unload_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">801</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">menuMan_c</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">54</Data> </Cell> 
+          <Cell> <Data ss:Type="String">__menu</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">264</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00105</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">42</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">35</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00128</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">35</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00125</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">23</Data> </Cell> 
+          <Cell> <Data ss:Type="String">__setJoy</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">46</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_menuMan_run</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">22</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__setKey</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__setJoy</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">18</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00122</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">17</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00119</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__getKey</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">12</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">11</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__setJoy_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">10</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__setJoy_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">9</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__setJoy_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00108</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00109</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00110</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">__menu</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00144</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__setJoy_00105</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__menu_00130</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">365</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">spriteMan_c</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_mspriteMan_create</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">38</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_forall_matching_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">36</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_spriteMan_forall_matching</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">52</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_spriteMan_destroy</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">35</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">50</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_forall_00101</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">31</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_spriteMan_init</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">17</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_update_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">16</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_destroy_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_forall_matching_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">7</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_spriteMan_set4destruction</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">7</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_update_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">7</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_spriteMan_forall_matching</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">6</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_mspriteMan_create</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">43</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_spriteMan_forall</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">_spriteMan_numEntities</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">4</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_mspriteMan_create_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_forall_matching_00106</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">36</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_spriteMan_update</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">27</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_mspriteMan_create_00103</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_spriteMan_init</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">17</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_spriteMan_update_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">_spriteMan_set4destruction</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">7</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="String">_spriteMan_numEntities</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">4</Data> </Cell> 
+    </Row> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">236</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">isometricSys_c</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00113</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">184</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00113</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">71</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00105</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">50</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00149</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">48</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__drawCanvas</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">41</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">383</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__drawFrame</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">30</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00116</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">29</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00110</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">26</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00106</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">22</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">20</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">237</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_isometricSys_update</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">18</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">15</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00108</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00122</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">10</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00107</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">10</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00110</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">10</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00120</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00104</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">8</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00121</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00118</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00111</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">5</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00115</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">4</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawCanvas_00123</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l__drawFrame_00114</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">3</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">638</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">main_c</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
-          <Cell> <Data ss:Type="String">l_main_00102</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">169</Data> </Cell> 
-    </Row> 
-    <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_main</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">12</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">181</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">8110</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">3719</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
           <Cell> <Data ss:Type="String">rodata_compiler</Data> </Cell> 
@@ -1066,13 +734,15 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_SCREEN</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_LEVEL</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">8</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1080,9 +750,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_0</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1090,9 +761,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_flipTable</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">256</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">256</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1100,13 +772,15 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_template_descriptor</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">24</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_template_game</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">7</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">31</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1114,41 +788,50 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_0</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">23</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">22</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">22</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">14</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_4</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">12</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_SCREEN</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_LEVEL</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_PATTERN_BORDER1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">3</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_PATTERN_BORDER2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">3</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">107</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1156,9 +839,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_keysdef</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">5</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1166,73 +850,90 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_10</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">27</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_8</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">25</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_11</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">23</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_12</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">22</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_4</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_9</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_7</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">20</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_0</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_5</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">7</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_6</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_SCREEN</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_LEVEL</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_PATTERN01</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_PATTERN02</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">260</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1240,57 +941,70 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_0</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_2</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_3</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_4</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_10</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_5</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_6</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_7</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_8</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">___str_9</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_SCREEN</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_LEVEL</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">92</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1298,17 +1012,20 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_MAIN_MESS1</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">13</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_SCREEN</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_LEVEL</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">21</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1316,16 +1033,18 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_SCREEN</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_AREA_LEVEL</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">4</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">8</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">790</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -1336,9 +1055,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_common_Tiles_08x08_begin</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">72</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">72</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1346,9 +1066,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_level01_Pack_begin</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">299</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">299</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1356,13 +1077,14 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_sprite_Robin_24x32_begin</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">856</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">850</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">856</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">850</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">1227</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">1221</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
           <Cell> <Data ss:Type="String">data_compiler</Data> </Cell> 
@@ -1372,12 +1094,13 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_console_y</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
@@ -1388,13 +1111,14 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__malloc_heap</Data> </Cell> 
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
+          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
-          <Cell> <Data ss:Type="Number">13</Data> </Cell> 
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
+          <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> 
           <Cell> <Data ss:Type="String">bss_compiler</Data> </Cell> 
@@ -1404,13 +1128,15 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_tick</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_timer</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1418,13 +1144,15 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__bin2str_result_65536_246</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_heapFree</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">11</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1432,25 +1160,30 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_charset</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_row</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_video</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_string</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_style</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1458,13 +1191,15 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_game</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">7</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_player_cmd</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">9</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1472,9 +1207,10 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_input</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">17</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">17</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1482,21 +1218,25 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_canvas</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">188</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_sprite_Robin_24x32_unpack</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_sprite_Robin_descriptor</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_level01_Pack_unpack</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">194</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1504,33 +1244,40 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__menu_MENU2_65536_172</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">12</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__menu_MENU1_65536_172</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">10</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_input</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__menu_option_65536_172</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__menu_pos_65536_172</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__menu_key_65536_172</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">__menu_color_65536_172</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">28</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1538,21 +1285,25 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_m_entities</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">240</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_m_next_free_entity</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_m_zero_type_at_the_end</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_m_num_entities</Data> </Cell> 
+          <Cell> <Data ss:Type="String">public</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">244</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> 
@@ -1560,28 +1311,33 @@
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_pScreen</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">2</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_ini_x</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_ini_y</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_rol_x</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
     <Row> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="String">_rol_y</Data> </Cell> 
+          <Cell> <Data ss:Type="String">local</Data> </Cell> 
           <Cell> <Data ss:Type="Number">1</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">6</Data> </Cell> 
     </Row> 
-    <Row> <Cell/> <Cell/> <Cell/>  <Cell/> <Cell/> <Cell/>
+    <Row> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> <Cell/> 
           <Cell> <Data ss:Type="Number">520</Data> </Cell> 
     </Row> 
 </Table> 

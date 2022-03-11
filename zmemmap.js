@@ -20,3 +20,22 @@ prog
   
 prog.parse()
   
+
+  
+/*
+TODO
+
+- Repetitions:
+	_guiUtil_border                 = $703A
+	_zx_border_fastcall             = $703A
+	asm_zx_border                   = $703A
+
+- Local slices:
+	__events
+	l__events_00101
+	l__events_00103
+	l__events_00104
+	l__events_00105
+	l__events_00108
+
+*/
