@@ -1,6 +1,6 @@
 {
   "name": "zmemmap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Z88DK tool to parse and interpret the memory map files (.map)",
   "author": "fraespre",
   "license": "MIT",
