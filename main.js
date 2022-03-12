@@ -33,7 +33,6 @@ function mainScan(filePath, options) {
   try {
     struct= initStruct(filePath, options)
     readMapFile(struct)
-    filterExceptions(struct)
     resultConstants(struct)
     calculateSize(struct)
     resultGrouping(struct)
@@ -116,14 +115,6 @@ function readMapFile(struct) {
   }
   
   debug(struct, "parsed "+lines.length+" lines => extracted "+struct.src_addr.length+" addresses and "+struct.src_cons.length+" constants")
-}
-
-function filterExceptions(struct) {
-  var detailTmp1
-  
-  //detailTmp1= struct.src_addr.filter((i) => { return i.id === item.id })
-  
-  //console.log( detailTmp1 )
 }
 
 function resultConstants(struct) {
