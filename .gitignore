@@ -1,0 +1,5 @@
+/node_modules
+/bin/*
+.project
+.bat
+package-lock.json
