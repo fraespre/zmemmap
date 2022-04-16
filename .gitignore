@@ -3,3 +3,5 @@
 .project
 *.bat
 package-lock.json
+*.code-workspace
+
