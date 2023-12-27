@@ -1,6 +1,6 @@
 {
   "name": "zmemmap",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Z88DK tool to parse and interpret the memory map files (.map)",
   "author": "fraespre",
   "license": "MIT",
@@ -14,9 +14,6 @@
   },
   "scripts": {
     "preinstall": "npm i -g pkg",
-    "test": "node zmemmap",
-    "package-win": "pkg . --target node12-win-x64 --output ./bin/zmemmap-vx.x.x-win64-withNode12.exe --no-bytecode",
-    "package-linux": "pkg . --target node12-linux-x64 --output ./bin/zmemmap-vx.x.x-linux64-withNode12 --no-bytecode",
-    "package-macos": "pkg . --target node12-macos-x64 --output ./bin/zmemmap-vx.x.x-macos64-withNode12 --no-bytecode"
+    "test": "node zmemmap"
   }
 }

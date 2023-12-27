@@ -5,10 +5,12 @@ The result is an Excel report with detailed information about your memory map fi
   
 Here you can find an example:
 
-- this is the resume tab  
+- this is the Resume tab  
 ![sample_resume](./doc/sample_resume.png)
 
 - this is the Grouped-Items tab    
 ![sample_groupedItems](./doc/sample_groupedItems.png)
 
+- this is the Mem-Map tab    
+![sample_groupedItems](./doc/sample_memMap.png)
 
