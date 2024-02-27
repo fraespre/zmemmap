@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "Z88DK tool to parse and interpret the memory map files (.map)",
   "author": "fraespre",
-  "license": "MIT",
+  "license": "GPL3",
   "main": "./main.js",
   "bin": "./zmemmap.js",
   "pkg": {
